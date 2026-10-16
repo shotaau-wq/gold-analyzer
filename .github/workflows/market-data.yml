@@ -2,7 +2,7 @@ name: Update daily Treasury data
 on:
   workflow_dispatch:
   schedule:
-    - cron: '23 */6 * * *'
+    - cron: '23 * * * *'
 permissions:
   contents: write
 concurrency:
@@ -14,46 +14,127 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-      - name: Fetch public FRED data
+      - name: Fetch rates calendar and official news
         shell: bash
         run: |
           python3 - <<'PYTHON'
-          import csv,io,json,math,urllib.request,datetime,pathlib
+          import csv, io, json, math, urllib.request, datetime, pathlib, re, html, email.utils
+          import xml.etree.ElementTree as ET
+          from concurrent.futures import ThreadPoolExecutor
           
-          def build_rates(raw):
-           rows=list(csv.DictReader(io.StringIO(raw)))
-           result={}
+          UTC=datetime.timezone.utc
+          NOW=datetime.datetime.now(UTC)
+          STAMP=NOW.isoformat()
+          UA='Mozilla/5.0 (compatible; PersonalGoldDashboard/4.0)'
+          def get(url):
+           req=urllib.request.Request(url,headers={'User-Agent':UA,'Accept':'application/json, application/xml, text/xml, text/csv, */*'})
+           with urllib.request.urlopen(req,timeout=30) as r:
+            raw=r.read(4000000)
+            if len(raw)>=4000000: raise ValueError('response too large')
+            return raw.decode('utf-8-sig')
+          def iso(raw):
+           try: d=datetime.datetime.fromisoformat(raw.replace('Z','+00:00'))
+           except ValueError: d=email.utils.parsedate_to_datetime(raw)
+           if d.tzinfo is None: raise ValueError('timezone missing')
+           return d.astimezone(UTC)
+          def plain(s,limit=240):
+           return re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]*>',' ',s or ''))).strip()[:limit]
+          def rates(raw):
+           rows=list(csv.DictReader(io.StringIO(raw)));out={}
            for code in ['DGS2','DGS10','DFII10']:
             valid=[]
             for r in rows:
              try:
-              v=float(r.get(code,''))
-              if not math.isfinite(v): continue
-              date=r.get('observation_date',r.get('DATE',''))
-              datetime.date.fromisoformat(date)
+              v=float(r.get(code,''));date=r.get('observation_date',r.get('DATE',''))
+              if not math.isfinite(v):continue
+              if datetime.date.fromisoformat(date)>NOW.date():continue
               valid.append({'date':date,'value':v})
-             except (ValueError,TypeError): continue
+             except (ValueError,TypeError):continue
             valid.sort(key=lambda x:x['date'])
-            if len(valid)<2: raise ValueError('insufficient observations: '+code)
-            result[code]={'latest':valid[-1],'previous':valid[-2]}
-           return result
+            if len(valid)<2:raise ValueError('missing rate observations')
+            out[code]={'latest':valid[-1],'previous':valid[-2]}
+           return out
           
-          def fetch():
-           url='https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2,DGS10,DFII10'
-           with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'GoldAnalyzer personal dashboard contact github repo owner'}),timeout=45) as r: raw=r.read().decode('utf-8-sig')
-           rates=build_rates(raw)
-           out={'version':1,'fetched_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'source':'FRED / Federal Reserve H.15 and Treasury inflation-indexed yields','rates':rates}
-           path=pathlib.Path('market-data.json');path.write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n')
-           print(json.dumps(out))
-          if __name__=='__main__': fetch()
+          def calendar(raw):
+           data=json.loads(raw)
+           if not isinstance(data,list) or not data:raise ValueError('empty calendar')
+           out=[]
+           for e in data:
+            if e.get('country') not in ['USD','JPY','All']:continue
+            try:d=iso(e.get('date',''))
+            except (ValueError,TypeError,AttributeError):continue
+            if abs((d-NOW).days)>15:continue
+            out.append({'title':plain(e.get('title',''),180),'country':e['country'],'date':d.isoformat(),'impact':str(e.get('impact',''))[:20],'forecast':plain(e.get('forecast',''),30),'previous':plain(e.get('previous',''),30)})
+           if not out:raise ValueError('no current calendar events')
+           return out
+          
+          def news(raw,label,host):
+           root=ET.fromstring(raw);ns={'a':'http://www.w3.org/2005/Atom'};out=[]
+           nodes=root.findall('.//item') or root.findall('a:entry',ns)
+           for n in nodes:
+            def field(name):return n.findtext(name) or n.findtext('a:'+name,namespaces=ns) or ''
+            title=plain(field('title'),220);url=field('link')
+            if not url:
+             link=n.find('a:link',ns)
+             url=link.get('href','') if link is not None else ''
+            from urllib.parse import urlparse
+            parsed=urlparse(url)
+            if parsed.scheme!='https' or parsed.hostname not in [host,'www.'+host]:continue
+            try:d=iso(field('pubDate') or field('published') or field('updated'))
+            except (ValueError,TypeError,AttributeError):continue
+            if d>NOW+datetime.timedelta(minutes=5) or NOW-d>datetime.timedelta(days=45):continue
+            desc=plain(field('description') or field('summary') or field('content'),240)
+            if not title:continue
+            out.append({'title':title,'url':url,'published_at':d.isoformat(),'source':label,'summary':desc})
+           return out[:8]
+          
+          SOURCES=[('rates','https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2,DGS10,DFII10'),('calendar','https://nfs.faireconomy.media/ff_calendar_thisweek.json'),('fed_policy','https://www.federalreserve.gov/feeds/press_monetary.xml'),('fed_speeches','https://www.federalreserve.gov/feeds/speeches.xml'),('bls_cpi','https://www.bls.gov/feed/cpi.rss'),('bls_jobs','https://www.bls.gov/feed/empsit.rss'),('bls_ppi','https://www.bls.gov/feed/ppi.rss')]
+          def fetch_source(pair):
+           key,url=pair
+           try:
+            raw=get(url)
+            val=rates(raw) if key=='rates' else calendar(raw) if key=='calendar' else news(raw,{'fed_policy':'FRB 金融政策','fed_speeches':'FRB 講演','bls_cpi':'BLS CPI','bls_jobs':'BLS 雇用統計','bls_ppi':'BLS PPI'}[key],'federalreserve.gov' if key.startswith('fed_') else 'bls.gov')
+            if key not in ['rates','calendar'] and not val:raise ValueError('no recent articles')
+            return key,val,None
+           except Exception as e:return key,None,type(e).__name__
+          
+          def main():
+           path=pathlib.Path('market-data.json')
+           try:out=json.loads(path.read_text())
+           except (OSError,ValueError):out={}
+           out.update(version=1,bundle_version=4,bundle_fetched_at=STAMP)
+           sources={};articles={}
+           for key,val,err in ThreadPoolExecutor(max_workers=7).map(fetch_source,SOURCES):
+            if key=='rates':
+             out['rates_error']=err
+             if not err:out.update(rates=val,fetched_at=STAMP,rates_fetched_at=STAMP,source='Federal Reserve H.15 / FRED')
+            elif key=='calendar':
+             old=out.get('calendar',{});out['calendar']={**old,'error':err}
+             if not err:out['calendar'].update(events=val,fetched_at=STAMP,source='Forex Factory')
+            else:
+             previous=out.get('news',{}).get('sources',{}).get(key,{})
+             sources[key]={'error':err,'fetched_at':previous.get('fetched_at') if err else STAMP}
+             olditems=[n for n in out.get('news',{}).get('items',[]) if n.get('feed')==key]
+             for item in (olditems if err else val):
+              try:
+               if NOW-iso(item['published_at'])>datetime.timedelta(days=45):continue
+              except (KeyError,ValueError):continue
+              item['feed']=key;articles[item['url']]=item
+           out['news']={'fetched_at':STAMP,'sources':sources,'items':sorted(articles.values(),key=lambda n:n['published_at'],reverse=True)[:20]}
+           if not out.get('rates'):raise RuntimeError('No valid rate data available')
+           tmp=path.with_suffix('.tmp');tmp.write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n');tmp.replace(path)
+           print('Rates:', 'saved' if not out.get('rates_error') else 'previous data retained')
+           print('Calendar:',len(out.get('calendar',{}).get('events',[])),out.get('calendar',{}).get('error'))
+           print('News:',len(out['news']['items']),'feed states:',sources)
+          if __name__=='__main__':main()
           PYTHON
-      - name: Save daily data
+      - name: Save public market data
         shell: bash
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add market-data.json
           if ! git diff --cached --quiet; then
-            git commit -m 'Refresh public Treasury data'
+            git commit -m 'Refresh rates calendar and official news'
             git push
           fi
