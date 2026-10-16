@@ -1,0 +1,59 @@
+name: Update daily Treasury data
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 */6 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: daily-market-data
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Fetch public FRED data
+        shell: bash
+        run: |
+          python3 - <<'PYTHON'
+          import csv,io,json,math,urllib.request,datetime,pathlib
+          
+          def build_rates(raw):
+           rows=list(csv.DictReader(io.StringIO(raw)))
+           result={}
+           for code in ['DGS2','DGS10','DFII10']:
+            valid=[]
+            for r in rows:
+             try:
+              v=float(r.get(code,''))
+              if not math.isfinite(v): continue
+              date=r.get('observation_date',r.get('DATE',''))
+              datetime.date.fromisoformat(date)
+              valid.append({'date':date,'value':v})
+             except (ValueError,TypeError): continue
+            valid.sort(key=lambda x:x['date'])
+            if len(valid)<2: raise ValueError('insufficient observations: '+code)
+            result[code]={'latest':valid[-1],'previous':valid[-2]}
+           return result
+          
+          def fetch():
+           url='https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2,DGS10,DFII10'
+           with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'GoldAnalyzer personal dashboard contact github repo owner'}),timeout=45) as r: raw=r.read().decode('utf-8-sig')
+           rates=build_rates(raw)
+           out={'version':1,'fetched_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'source':'FRED / Federal Reserve H.15 and Treasury inflation-indexed yields','rates':rates}
+           path=pathlib.Path('market-data.json');path.write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n')
+           print(json.dumps(out))
+          if __name__=='__main__': fetch()
+          PYTHON
+      - name: Save daily data
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add market-data.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh public Treasury data'
+            git push
+          fi
