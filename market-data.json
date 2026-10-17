@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "fetched_at": "2026-10-17T10:47:56.427774+00:00",
+  "fetched_at": "2026-10-17T11:46:16.425033+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
@@ -35,9 +35,9 @@
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-10-17T10:47:56.427774+00:00",
+  "bundle_fetched_at": "2026-10-17T11:46:16.425033+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-10-17T10:47:56.427774+00:00",
+  "rates_fetched_at": "2026-10-17T11:46:16.425033+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -418,31 +418,31 @@
         "previous": ""
       }
     ],
-    "fetched_at": "2026-10-17T10:47:56.427774+00:00",
+    "fetched_at": "2026-10-17T11:46:16.425033+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-10-17T10:47:56.427774+00:00",
+    "fetched_at": "2026-10-17T11:46:16.425033+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-10-17T10:47:56.427774+00:00"
+        "fetched_at": "2026-10-17T11:46:16.425033+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-10-17T10:47:56.427774+00:00"
+        "fetched_at": "2026-10-17T11:46:16.425033+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-10-17T10:47:56.427774+00:00"
+        "fetched_at": "2026-10-17T11:46:16.425033+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-10-17T10:47:56.427774+00:00"
+        "fetched_at": "2026-10-17T11:46:16.425033+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-10-17T10:47:56.427774+00:00"
+        "fetched_at": "2026-10-17T11:46:16.425033+00:00"
       }
     },
     "items": [
