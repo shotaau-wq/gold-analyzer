@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "fetched_at": "2026-10-18T03:54:09.470882+00:00",
+  "fetched_at": "2026-10-18T04:52:52.458827+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
@@ -35,414 +35,190 @@
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-10-18T03:54:09.470882+00:00",
+  "bundle_fetched_at": "2026-10-18T04:52:52.458827+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-10-18T03:54:09.470882+00:00",
+  "rates_fetched_at": "2026-10-18T04:52:52.458827+00:00",
   "calendar": {
     "error": null,
     "events": [
       {
-        "title": "Bank Holiday",
-        "country": "JPY",
-        "date": "2026-10-11T23:00:00+00:00",
-        "impact": "Holiday",
-        "forecast": "",
-        "previous": ""
-      },
-      {
-        "title": "Bank Holiday",
-        "country": "USD",
-        "date": "2026-10-12T11:00:00+00:00",
-        "impact": "Holiday",
-        "forecast": "",
-        "previous": ""
-      },
-      {
         "title": "IMF Meetings",
         "country": "All",
-        "date": "2026-10-12T14:15:00+00:00",
+        "date": "2026-10-18T14:15:00+00:00",
         "impact": "Low",
         "forecast": "",
         "previous": ""
       },
       {
-        "title": "FOMC Member Hammack Speaks",
-        "country": "USD",
-        "date": "2026-10-12T16:10:00+00:00",
-        "impact": "Low",
-        "forecast": "",
-        "previous": ""
-      },
-      {
-        "title": "Bank Lending y/y",
+        "title": "Tertiary Industry Activity m/m",
         "country": "JPY",
-        "date": "2026-10-12T23:50:00+00:00",
+        "date": "2026-10-19T04:30:00+00:00",
         "impact": "Low",
-        "forecast": "5.5%",
-        "previous": "5.4%"
+        "forecast": "-0.3%",
+        "previous": "0.4%"
       },
       {
-        "title": "PPI y/y",
-        "country": "JPY",
-        "date": "2026-10-12T23:50:00+00:00",
-        "impact": "Low",
-        "forecast": "7.6%",
-        "previous": "7.6%"
-      },
-      {
-        "title": "FOMC Member Waller Speaks",
+        "title": "NAHB Housing Market Index",
         "country": "USD",
-        "date": "2026-10-13T07:45:00+00:00",
+        "date": "2026-10-19T14:00:00+00:00",
         "impact": "Low",
-        "forecast": "",
-        "previous": ""
-      },
-      {
-        "title": "NFIB Small Business Index",
-        "country": "USD",
-        "date": "2026-10-13T10:00:00+00:00",
-        "impact": "Low",
-        "forecast": "98.1",
-        "previous": "98.7"
+        "forecast": "31",
+        "previous": "32"
       },
       {
         "title": "ADP Weekly Employment Change",
         "country": "USD",
-        "date": "2026-10-13T12:15:00+00:00",
+        "date": "2026-10-20T12:15:00+00:00",
         "impact": "Low",
         "forecast": "",
-        "previous": "23.8K"
+        "previous": "24.8K"
       },
       {
-        "title": "Existing Home Sales",
+        "title": "Building Permits",
         "country": "USD",
-        "date": "2026-10-13T14:00:00+00:00",
+        "date": "2026-10-20T12:30:00+00:00",
         "impact": "Low",
-        "forecast": "3.95M",
-        "previous": "3.98M"
+        "forecast": "1.39M",
+        "previous": "1.39M"
       },
       {
-        "title": "IMF Meetings",
-        "country": "All",
-        "date": "2026-10-13T14:15:00+00:00",
-        "impact": "Low",
-        "forecast": "",
-        "previous": ""
-      },
-      {
-        "title": "FOMC Member Barkin Speaks",
+        "title": "Housing Starts",
         "country": "USD",
-        "date": "2026-10-13T17:00:00+00:00",
+        "date": "2026-10-20T12:30:00+00:00",
         "impact": "Low",
-        "forecast": "",
-        "previous": ""
+        "forecast": "1.30M",
+        "previous": "1.28M"
       },
       {
-        "title": "FOMC Member Collins Speaks",
+        "title": "Pending Home Sales m/m",
         "country": "USD",
-        "date": "2026-10-13T20:00:00+00:00",
+        "date": "2026-10-20T14:00:00+00:00",
         "impact": "Low",
-        "forecast": "",
-        "previous": ""
-      },
-      {
-        "title": "M2 Money Stock y/y",
-        "country": "JPY",
-        "date": "2026-10-13T23:50:00+00:00",
-        "impact": "Low",
-        "forecast": "2.1%",
-        "previous": "2.0%"
-      },
-      {
-        "title": "FOMC Member Bowman Speaks",
-        "country": "USD",
-        "date": "2026-10-14T09:40:00+00:00",
-        "impact": "Low",
-        "forecast": "",
-        "previous": ""
-      },
-      {
-        "title": "Core CPI m/m",
-        "country": "USD",
-        "date": "2026-10-14T12:30:00+00:00",
-        "impact": "High",
-        "forecast": "0.2%",
+        "forecast": "-0.4%",
         "previous": "0.3%"
-      },
-      {
-        "title": "Core CPI y/y",
-        "country": "USD",
-        "date": "2026-10-14T12:30:00+00:00",
-        "impact": "High",
-        "forecast": "2.5%",
-        "previous": "2.4%"
-      },
-      {
-        "title": "CPI m/m",
-        "country": "USD",
-        "date": "2026-10-14T12:30:00+00:00",
-        "impact": "High",
-        "forecast": "0.6%",
-        "previous": "0.4%"
-      },
-      {
-        "title": "CPI y/y",
-        "country": "USD",
-        "date": "2026-10-14T12:30:00+00:00",
-        "impact": "High",
-        "forecast": "3.6%",
-        "previous": "3.4%"
-      },
-      {
-        "title": "IMF Meetings",
-        "country": "All",
-        "date": "2026-10-14T14:15:00+00:00",
-        "impact": "Low",
-        "forecast": "",
-        "previous": ""
-      },
-      {
-        "title": "FOMC Member Barkin Speaks",
-        "country": "USD",
-        "date": "2026-10-14T17:30:00+00:00",
-        "impact": "Low",
-        "forecast": "",
-        "previous": ""
-      },
-      {
-        "title": "Beige Book",
-        "country": "USD",
-        "date": "2026-10-14T18:00:00+00:00",
-        "impact": "Low",
-        "forecast": "",
-        "previous": ""
-      },
-      {
-        "title": "FOMC Member Goolsbee Speaks",
-        "country": "USD",
-        "date": "2026-10-14T19:00:00+00:00",
-        "impact": "Low",
-        "forecast": "",
-        "previous": ""
       },
       {
         "title": "API Weekly Statistical Bulletin",
         "country": "USD",
-        "date": "2026-10-14T20:30:00+00:00",
+        "date": "2026-10-20T20:30:00+00:00",
         "impact": "Low",
         "forecast": "",
         "previous": ""
       },
       {
-        "title": "Core Machinery Orders m/m",
+        "title": "Trade Balance",
         "country": "JPY",
-        "date": "2026-10-14T23:50:00+00:00",
+        "date": "2026-10-20T23:50:00+00:00",
         "impact": "Low",
-        "forecast": "2.2%",
-        "previous": "-3.7%"
-      },
-      {
-        "title": "FOMC Member Bowman Speaks",
-        "country": "USD",
-        "date": "2026-10-15T02:55:00+00:00",
-        "impact": "Low",
-        "forecast": "",
-        "previous": ""
-      },
-      {
-        "title": "Revised Industrial Production m/m",
-        "country": "JPY",
-        "date": "2026-10-15T04:30:00+00:00",
-        "impact": "Low",
-        "forecast": "-1.7%",
-        "previous": "-1.7%"
-      },
-      {
-        "title": "Core PPI m/m",
-        "country": "USD",
-        "date": "2026-10-15T12:30:00+00:00",
-        "impact": "High",
-        "forecast": "0.3%",
-        "previous": "0.2%"
-      },
-      {
-        "title": "Core Retail Sales m/m",
-        "country": "USD",
-        "date": "2026-10-15T12:30:00+00:00",
-        "impact": "High",
-        "forecast": "0.6%",
-        "previous": "1.4%"
-      },
-      {
-        "title": "PPI m/m",
-        "country": "USD",
-        "date": "2026-10-15T12:30:00+00:00",
-        "impact": "High",
-        "forecast": "0.6%",
-        "previous": "0.4%"
-      },
-      {
-        "title": "Retail Sales m/m",
-        "country": "USD",
-        "date": "2026-10-15T12:30:00+00:00",
-        "impact": "High",
-        "forecast": "0.3%",
-        "previous": "1.2%"
-      },
-      {
-        "title": "Philly Fed Manufacturing Index",
-        "country": "USD",
-        "date": "2026-10-15T12:30:00+00:00",
-        "impact": "Medium",
-        "forecast": "28.2",
-        "previous": "37.8"
-      },
-      {
-        "title": "Unemployment Claims",
-        "country": "USD",
-        "date": "2026-10-15T12:30:00+00:00",
-        "impact": "Medium",
-        "forecast": "199K",
-        "previous": "197K"
-      },
-      {
-        "title": "Empire State Manufacturing Index",
-        "country": "USD",
-        "date": "2026-10-15T12:30:00+00:00",
-        "impact": "Low",
-        "forecast": "12.1",
-        "previous": "7.6"
-      },
-      {
-        "title": "Business Inventories m/m",
-        "country": "USD",
-        "date": "2026-10-15T14:00:00+00:00",
-        "impact": "Low",
-        "forecast": "0.4%",
-        "previous": "0.8%"
-      },
-      {
-        "title": "IMF Meetings",
-        "country": "All",
-        "date": "2026-10-15T14:15:00+00:00",
-        "impact": "Low",
-        "forecast": "",
-        "previous": ""
-      },
-      {
-        "title": "Natural Gas Storage",
-        "country": "USD",
-        "date": "2026-10-15T14:30:00+00:00",
-        "impact": "Low",
-        "forecast": "76B",
-        "previous": "85B"
+        "forecast": "-0.21T",
+        "previous": "-0.84T"
       },
       {
         "title": "Crude Oil Inventories",
         "country": "USD",
-        "date": "2026-10-15T16:00:00+00:00",
-        "impact": "Low",
-        "forecast": "0.2M",
-        "previous": "-3.2M"
-      },
-      {
-        "title": "FOMC Member Hammack Speaks",
-        "country": "USD",
-        "date": "2026-10-15T20:30:00+00:00",
+        "date": "2026-10-21T14:30:00+00:00",
         "impact": "Low",
         "forecast": "",
-        "previous": ""
+        "previous": "-8.6M"
       },
       {
-        "title": "Fed Chairman Warsh Speaks",
+        "title": "Unemployment Claims",
         "country": "USD",
-        "date": "2026-10-16T03:30:00+00:00",
-        "impact": "High",
-        "forecast": "",
-        "previous": ""
+        "date": "2026-10-22T12:30:00+00:00",
+        "impact": "Medium",
+        "forecast": "200K",
+        "previous": "199K"
       },
       {
-        "title": "Import Prices m/m",
+        "title": "CB Leading Index m/m",
         "country": "USD",
-        "date": "2026-10-16T12:30:00+00:00",
+        "date": "2026-10-22T14:00:00+00:00",
         "impact": "Low",
-        "forecast": "0.9%",
-        "previous": "0.7%"
+        "forecast": "-0.2%",
+        "previous": "-0.1%"
       },
       {
-        "title": "Capacity Utilization Rate",
+        "title": "Natural Gas Storage",
         "country": "USD",
-        "date": "2026-10-16T13:15:00+00:00",
-        "impact": "Low",
-        "forecast": "76.5%",
-        "previous": "76.3%"
-      },
-      {
-        "title": "Industrial Production m/m",
-        "country": "USD",
-        "date": "2026-10-16T13:15:00+00:00",
-        "impact": "Low",
-        "forecast": "0.4%",
-        "previous": "0.0%"
-      },
-      {
-        "title": "IMF Meetings",
-        "country": "All",
-        "date": "2026-10-16T14:15:00+00:00",
+        "date": "2026-10-22T14:30:00+00:00",
         "impact": "Low",
         "forecast": "",
-        "previous": ""
+        "previous": "67B"
       },
       {
-        "title": "Federal Budget Balance",
+        "title": "National Core CPI y/y",
+        "country": "JPY",
+        "date": "2026-10-22T23:30:00+00:00",
+        "impact": "Low",
+        "forecast": "2.1%",
+        "previous": "1.7%"
+      },
+      {
+        "title": "Flash Manufacturing PMI",
+        "country": "JPY",
+        "date": "2026-10-23T00:30:00+00:00",
+        "impact": "Low",
+        "forecast": "54.5",
+        "previous": "54.1"
+      },
+      {
+        "title": "Flash Manufacturing PMI",
         "country": "USD",
-        "date": "2026-10-16T18:05:00+00:00",
-        "impact": "Low",
-        "forecast": "-34.7B",
-        "previous": "-166.8B"
+        "date": "2026-10-23T13:45:00+00:00",
+        "impact": "Medium",
+        "forecast": "55.5",
+        "previous": "57.0"
       },
       {
-        "title": "TIC Long-Term Purchases",
+        "title": "Flash Services PMI",
         "country": "USD",
-        "date": "2026-10-16T20:00:00+00:00",
-        "impact": "Low",
-        "forecast": "75.2B",
-        "previous": "-27.9B"
+        "date": "2026-10-23T13:45:00+00:00",
+        "impact": "Medium",
+        "forecast": "58.0",
+        "previous": "58.7"
       },
       {
-        "title": "IMF Meetings",
-        "country": "All",
-        "date": "2026-10-17T14:15:00+00:00",
-        "impact": "Low",
+        "title": "Revised UoM Consumer Sentiment",
+        "country": "USD",
+        "date": "2026-10-23T14:00:00+00:00",
+        "impact": "Medium",
+        "forecast": "46.3",
+        "previous": "46.3"
+      },
+      {
+        "title": "Revised UoM Inflation Expectations",
+        "country": "USD",
+        "date": "2026-10-23T14:00:00+00:00",
+        "impact": "Medium",
         "forecast": "",
-        "previous": ""
+        "previous": "4.7%"
       }
     ],
-    "fetched_at": "2026-10-18T03:54:09.470882+00:00",
+    "fetched_at": "2026-10-18T04:52:52.458827+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-10-18T03:54:09.470882+00:00",
+    "fetched_at": "2026-10-18T04:52:52.458827+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-10-18T03:54:09.470882+00:00"
+        "fetched_at": "2026-10-18T04:52:52.458827+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-10-18T03:54:09.470882+00:00"
+        "fetched_at": "2026-10-18T04:52:52.458827+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-10-18T03:54:09.470882+00:00"
+        "fetched_at": "2026-10-18T04:52:52.458827+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-10-18T03:54:09.470882+00:00"
+        "fetched_at": "2026-10-18T04:52:52.458827+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-10-18T03:54:09.470882+00:00"
+        "fetched_at": "2026-10-18T04:52:52.458827+00:00"
       }
     },
     "items": [
