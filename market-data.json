@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "fetched_at": "2026-10-19T15:55:00.173238+00:00",
+  "fetched_at": "2026-10-19T16:58:37.591708+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
@@ -35,9 +35,9 @@
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-10-19T15:55:00.173238+00:00",
+  "bundle_fetched_at": "2026-10-19T16:58:37.591708+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-10-19T15:55:00.173238+00:00",
+  "rates_fetched_at": "2026-10-19T16:58:37.591708+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -94,7 +94,7 @@
         "country": "USD",
         "date": "2026-10-20T14:00:00+00:00",
         "impact": "Low",
-        "forecast": "-0.4%",
+        "forecast": "-0.7%",
         "previous": "0.3%"
       },
       {
@@ -110,7 +110,7 @@
         "country": "JPY",
         "date": "2026-10-20T23:50:00+00:00",
         "impact": "Low",
-        "forecast": "-0.21T",
+        "forecast": "-0.26T",
         "previous": "-0.84T"
       },
       {
@@ -194,31 +194,31 @@
         "previous": "4.7%"
       }
     ],
-    "fetched_at": "2026-10-19T15:55:00.173238+00:00",
+    "fetched_at": "2026-10-19T16:58:37.591708+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-10-19T15:55:00.173238+00:00",
+    "fetched_at": "2026-10-19T16:58:37.591708+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-10-19T15:55:00.173238+00:00"
+        "fetched_at": "2026-10-19T16:58:37.591708+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-10-19T15:55:00.173238+00:00"
+        "fetched_at": "2026-10-19T16:58:37.591708+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-10-19T15:55:00.173238+00:00"
+        "fetched_at": "2026-10-19T16:58:37.591708+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-10-19T15:55:00.173238+00:00"
+        "fetched_at": "2026-10-19T16:58:37.591708+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-10-19T15:55:00.173238+00:00"
+        "fetched_at": "2026-10-19T16:58:37.591708+00:00"
       }
     },
     "items": [
