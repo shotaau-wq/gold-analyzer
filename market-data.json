@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "fetched_at": "2026-10-25T11:50:25.659227+00:00",
+  "fetched_at": "2026-10-25T13:02:16.775376+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
@@ -35,9 +35,9 @@
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-10-25T11:50:25.659227+00:00",
+  "bundle_fetched_at": "2026-10-25T13:02:16.775376+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-10-25T11:50:25.659227+00:00",
+  "rates_fetched_at": "2026-10-25T13:02:16.775376+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -346,31 +346,31 @@
         "previous": ""
       }
     ],
-    "fetched_at": "2026-10-25T11:50:25.659227+00:00",
+    "fetched_at": "2026-10-25T13:02:16.775376+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-10-25T11:50:25.659227+00:00",
+    "fetched_at": "2026-10-25T13:02:16.775376+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-10-25T11:50:25.659227+00:00"
+        "fetched_at": "2026-10-25T13:02:16.775376+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-10-25T11:50:25.659227+00:00"
+        "fetched_at": "2026-10-25T13:02:16.775376+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-10-25T11:50:25.659227+00:00"
+        "fetched_at": "2026-10-25T13:02:16.775376+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-10-25T11:50:25.659227+00:00"
+        "fetched_at": "2026-10-25T13:02:16.775376+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-10-25T11:50:25.659227+00:00"
+        "fetched_at": "2026-10-25T13:02:16.775376+00:00"
       }
     },
     "items": [
@@ -501,14 +501,6 @@
         "source": "BLS CPI",
         "summary": "In August, the Consumer Price Index for All Urban Consumers rose 0.4 percent, seasonally adjusted (SA), and rose 3.4 percent over the last 12 months, not seasonally adjusted (NSA). The index for all items less food and energy rose 0.3 perce",
         "feed": "bls_cpi"
-      },
-      {
-        "title": "PPI for final demand moves up 0.4% in August; goods advance 1.1%, services rise 0.1%",
-        "url": "https://www.bls.gov/news.release/archives/ppi_09102026.htm",
-        "published_at": "2026-09-10T11:50:35.512000+00:00",
-        "source": "BLS PPI",
-        "summary": "The Producer Price Index for final demand moved up 0.4 percent in August. Prices for final demand goods advanced 1.1 percent, and the index for final demand services increased 0.1 percent. Prices for final demand rose 5.4 percent for the 12",
-        "feed": "bls_ppi"
       }
     ]
   }
