@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "fetched_at": "2026-10-26T11:01:52.928426+00:00",
+  "fetched_at": "2026-10-26T13:41:06.779149+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
@@ -35,9 +35,9 @@
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-10-26T11:01:52.928426+00:00",
+  "bundle_fetched_at": "2026-10-26T13:41:06.779149+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-10-26T11:01:52.928426+00:00",
+  "rates_fetched_at": "2026-10-26T13:41:06.779149+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -346,31 +346,31 @@
         "previous": ""
       }
     ],
-    "fetched_at": "2026-10-26T11:01:52.928426+00:00",
+    "fetched_at": "2026-10-26T13:41:06.779149+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-10-26T11:01:52.928426+00:00",
+    "fetched_at": "2026-10-26T13:41:06.779149+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-10-26T11:01:52.928426+00:00"
+        "fetched_at": "2026-10-26T13:41:06.779149+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-10-26T11:01:52.928426+00:00"
+        "fetched_at": "2026-10-26T13:41:06.779149+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-10-26T11:01:52.928426+00:00"
+        "fetched_at": "2026-10-26T13:41:06.779149+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-10-26T11:01:52.928426+00:00"
+        "fetched_at": "2026-10-26T13:41:06.779149+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-10-26T11:01:52.928426+00:00"
+        "fetched_at": "2026-10-26T13:41:06.779149+00:00"
       }
     },
     "items": [
@@ -493,14 +493,6 @@
         "source": "FRB 金融政策",
         "summary": "Federal Reserve Board and Federal Open Market Committee release economic projections from the September 15-16 FOMC meeting",
         "feed": "fed_policy"
-      },
-      {
-        "title": "CPI for all items increases 0.4% in August; gasoline rises",
-        "url": "https://www.bls.gov/news.release/archives/cpi_09112026.htm",
-        "published_at": "2026-09-11T11:50:40.968000+00:00",
-        "source": "BLS CPI",
-        "summary": "In August, the Consumer Price Index for All Urban Consumers rose 0.4 percent, seasonally adjusted (SA), and rose 3.4 percent over the last 12 months, not seasonally adjusted (NSA). The index for all items less food and energy rose 0.3 perce",
-        "feed": "bls_cpi"
       }
     ]
   }
