@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "fetched_at": "2026-10-26T19:11:37.694397+00:00",
+  "fetched_at": "2026-10-26T19:58:16.399234+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
@@ -35,9 +35,9 @@
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-10-26T19:11:37.694397+00:00",
+  "bundle_fetched_at": "2026-10-26T19:58:16.399234+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-10-26T19:11:37.694397+00:00",
+  "rates_fetched_at": "2026-10-26T19:58:16.399234+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -78,7 +78,7 @@
         "country": "USD",
         "date": "2026-10-27T12:30:00+00:00",
         "impact": "Low",
-        "forecast": "1.8%",
+        "forecast": "2.0%",
         "previous": "0.0%"
       },
       {
@@ -86,7 +86,7 @@
         "country": "USD",
         "date": "2026-10-27T13:00:00+00:00",
         "impact": "Low",
-        "forecast": "0.1%",
+        "forecast": "0.2%",
         "previous": "0.3%"
       },
       {
@@ -94,7 +94,7 @@
         "country": "USD",
         "date": "2026-10-27T13:00:00+00:00",
         "impact": "Low",
-        "forecast": "2.7%",
+        "forecast": "2.6%",
         "previous": "2.5%"
       },
       {
@@ -102,7 +102,7 @@
         "country": "USD",
         "date": "2026-10-27T14:00:00+00:00",
         "impact": "Medium",
-        "forecast": "80.7",
+        "forecast": "81.2",
         "previous": "81.9"
       },
       {
@@ -110,7 +110,7 @@
         "country": "USD",
         "date": "2026-10-27T14:00:00+00:00",
         "impact": "Low",
-        "forecast": "649K",
+        "forecast": "651K",
         "previous": "684K"
       },
       {
@@ -118,7 +118,7 @@
         "country": "USD",
         "date": "2026-10-27T14:00:00+00:00",
         "impact": "Low",
-        "forecast": "1",
+        "forecast": "0",
         "previous": "-2"
       },
       {
@@ -346,31 +346,31 @@
         "previous": ""
       }
     ],
-    "fetched_at": "2026-10-26T19:11:37.694397+00:00",
+    "fetched_at": "2026-10-26T19:58:16.399234+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-10-26T19:11:37.694397+00:00",
+    "fetched_at": "2026-10-26T19:58:16.399234+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-10-26T19:11:37.694397+00:00"
+        "fetched_at": "2026-10-26T19:58:16.399234+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-10-26T19:11:37.694397+00:00"
+        "fetched_at": "2026-10-26T19:58:16.399234+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-10-26T19:11:37.694397+00:00"
+        "fetched_at": "2026-10-26T19:58:16.399234+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-10-26T19:11:37.694397+00:00"
+        "fetched_at": "2026-10-26T19:58:16.399234+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-10-26T19:11:37.694397+00:00"
+        "fetched_at": "2026-10-26T19:58:16.399234+00:00"
       }
     },
     "items": [
