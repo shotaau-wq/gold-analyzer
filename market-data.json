@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "fetched_at": "2026-10-28T17:11:18.324051+00:00",
+  "fetched_at": "2026-10-28T18:03:44.887222+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
@@ -35,9 +35,9 @@
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-10-28T17:11:18.324051+00:00",
+  "bundle_fetched_at": "2026-10-28T18:03:44.887222+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-10-28T17:11:18.324051+00:00",
+  "rates_fetched_at": "2026-10-28T18:03:44.887222+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -346,34 +346,42 @@
         "previous": ""
       }
     ],
-    "fetched_at": "2026-10-28T17:11:18.324051+00:00",
+    "fetched_at": "2026-10-28T18:03:44.887222+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-10-28T17:11:18.324051+00:00",
+    "fetched_at": "2026-10-28T18:03:44.887222+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-10-28T17:11:18.324051+00:00"
+        "fetched_at": "2026-10-28T18:03:44.887222+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-10-28T17:11:18.324051+00:00"
+        "fetched_at": "2026-10-28T18:03:44.887222+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-10-28T17:11:18.324051+00:00"
+        "fetched_at": "2026-10-28T18:03:44.887222+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-10-28T17:11:18.324051+00:00"
+        "fetched_at": "2026-10-28T18:03:44.887222+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-10-28T17:11:18.324051+00:00"
+        "fetched_at": "2026-10-28T18:03:44.887222+00:00"
       }
     },
     "items": [
+      {
+        "title": "Federal Reserve issues FOMC statement",
+        "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+        "published_at": "2026-10-28T18:00:00+00:00",
+        "source": "FRB 金融政策",
+        "summary": "Federal Reserve issues FOMC statement",
+        "feed": "fed_policy"
+      },
       {
         "title": "PPI for final demand increases 1.3% in September; goods advance 2.6%, services rise 0.8%",
         "url": "https://www.bls.gov/news.release/archives/ppi_10152026.htm",
