@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "fetched_at": "2026-10-30T03:09:10.631671+00:00",
+  "fetched_at": "2026-10-30T04:10:27.301106+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
@@ -35,9 +35,9 @@
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-10-30T03:09:10.631671+00:00",
+  "bundle_fetched_at": "2026-10-30T04:10:27.301106+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-10-30T03:09:10.631671+00:00",
+  "rates_fetched_at": "2026-10-30T04:10:27.301106+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -274,9 +274,17 @@
         "previous": "2.7%"
       },
       {
+        "title": "BOJ Outlook Report",
+        "country": "JPY",
+        "date": "2026-10-30T03:02:00+00:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": ""
+      },
+      {
         "title": "BOJ Policy Rate",
         "country": "JPY",
-        "date": "2026-10-30T02:30:00+00:00",
+        "date": "2026-10-30T03:02:00+00:00",
         "impact": "High",
         "forecast": "<1.25%",
         "previous": "<1.25%"
@@ -284,15 +292,7 @@
       {
         "title": "Monetary Policy Statement",
         "country": "JPY",
-        "date": "2026-10-30T02:30:00+00:00",
-        "impact": "High",
-        "forecast": "",
-        "previous": ""
-      },
-      {
-        "title": "BOJ Outlook Report",
-        "country": "JPY",
-        "date": "2026-10-30T02:31:00+00:00",
+        "date": "2026-10-30T03:02:00+00:00",
         "impact": "High",
         "forecast": "",
         "previous": ""
@@ -346,31 +346,31 @@
         "previous": ""
       }
     ],
-    "fetched_at": "2026-10-30T03:09:10.631671+00:00",
+    "fetched_at": "2026-10-30T04:10:27.301106+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-10-30T03:09:10.631671+00:00",
+    "fetched_at": "2026-10-30T04:10:27.301106+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-10-30T03:09:10.631671+00:00"
+        "fetched_at": "2026-10-30T04:10:27.301106+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-10-30T03:09:10.631671+00:00"
+        "fetched_at": "2026-10-30T04:10:27.301106+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-10-30T03:09:10.631671+00:00"
+        "fetched_at": "2026-10-30T04:10:27.301106+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-10-30T03:09:10.631671+00:00"
+        "fetched_at": "2026-10-30T04:10:27.301106+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-10-30T03:09:10.631671+00:00"
+        "fetched_at": "2026-10-30T04:10:27.301106+00:00"
       }
     },
     "items": [
