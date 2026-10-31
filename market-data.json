@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "fetched_at": "2026-10-31T17:53:25.878812+00:00",
+  "fetched_at": "2026-10-31T19:09:33.508156+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
@@ -35,9 +35,9 @@
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-10-31T17:53:25.878812+00:00",
+  "bundle_fetched_at": "2026-10-31T19:09:33.508156+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-10-31T17:53:25.878812+00:00",
+  "rates_fetched_at": "2026-10-31T19:09:33.508156+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -354,31 +354,31 @@
         "previous": ""
       }
     ],
-    "fetched_at": "2026-10-31T17:53:25.878812+00:00",
+    "fetched_at": "2026-10-31T19:09:33.508156+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-10-31T17:53:25.878812+00:00",
+    "fetched_at": "2026-10-31T19:09:33.508156+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-10-31T17:53:25.878812+00:00"
+        "fetched_at": "2026-10-31T19:09:33.508156+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-10-31T17:53:25.878812+00:00"
+        "fetched_at": "2026-10-31T19:09:33.508156+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-10-31T17:53:25.878812+00:00"
+        "fetched_at": "2026-10-31T19:09:33.508156+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-10-31T17:53:25.878812+00:00"
+        "fetched_at": "2026-10-31T19:09:33.508156+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-10-31T17:53:25.878812+00:00"
+        "fetched_at": "2026-10-31T19:09:33.508156+00:00"
       }
     },
     "items": [
@@ -493,22 +493,6 @@
         "source": "FRB 講演",
         "summary": "Speech At Sibos 2026, Miami, Florida",
         "feed": "fed_speeches"
-      },
-      {
-        "title": "Federal Reserve issues FOMC statement",
-        "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
-        "published_at": "2026-09-16T18:00:00+00:00",
-        "source": "FRB 金融政策",
-        "summary": "Federal Reserve issues FOMC statement",
-        "feed": "fed_policy"
-      },
-      {
-        "title": "Federal Reserve Board and Federal Open Market Committee release economic projections from the September 15-16 FOMC meeting",
-        "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916b.htm",
-        "published_at": "2026-09-16T18:00:00+00:00",
-        "source": "FRB 金融政策",
-        "summary": "Federal Reserve Board and Federal Open Market Committee release economic projections from the September 15-16 FOMC meeting",
-        "feed": "fed_policy"
       }
     ]
   }
