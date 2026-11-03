@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "fetched_at": "2026-11-03T11:05:35.809932+00:00",
+  "fetched_at": "2026-11-03T18:29:32.309591+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
@@ -35,9 +35,9 @@
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-11-03T11:05:35.809932+00:00",
+  "bundle_fetched_at": "2026-11-03T18:29:32.309591+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-11-03T11:05:35.809932+00:00",
+  "rates_fetched_at": "2026-11-03T18:29:32.309591+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -106,6 +106,14 @@
         "previous": ""
       },
       {
+        "title": "RCM/TIPP Economic Optimism",
+        "country": "USD",
+        "date": "2026-11-03T09:00:00+00:00",
+        "impact": "Low",
+        "forecast": "46.2",
+        "previous": "46.8"
+      },
+      {
         "title": "JOLTS Job Openings",
         "country": "USD",
         "date": "2026-11-03T15:00:00+00:00",
@@ -120,14 +128,6 @@
         "impact": "Low",
         "forecast": "1.2%",
         "previous": "0.1%"
-      },
-      {
-        "title": "RCM/TIPP Economic Optimism",
-        "country": "USD",
-        "date": "2026-11-03T15:10:00+00:00",
-        "impact": "Low",
-        "forecast": "46.2",
-        "previous": "46.8"
       },
       {
         "title": "Omdia Total Vehicle Sales",
@@ -198,7 +198,7 @@
         "country": "USD",
         "date": "2026-11-04T15:30:00+00:00",
         "impact": "Low",
-        "forecast": "",
+        "forecast": "-0.1M",
         "previous": "-1.9M"
       },
       {
@@ -362,31 +362,31 @@
         "previous": "8.3B"
       }
     ],
-    "fetched_at": "2026-11-03T11:05:35.809932+00:00",
+    "fetched_at": "2026-11-03T18:29:32.309591+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-11-03T11:05:35.809932+00:00",
+    "fetched_at": "2026-11-03T18:29:32.309591+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-11-03T11:05:35.809932+00:00"
+        "fetched_at": "2026-11-03T18:29:32.309591+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-11-03T11:05:35.809932+00:00"
+        "fetched_at": "2026-11-03T18:29:32.309591+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-11-03T11:05:35.809932+00:00"
+        "fetched_at": "2026-11-03T18:29:32.309591+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-11-03T11:05:35.809932+00:00"
+        "fetched_at": "2026-11-03T18:29:32.309591+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-11-03T11:05:35.809932+00:00"
+        "fetched_at": "2026-11-03T18:29:32.309591+00:00"
       }
     },
     "items": [
