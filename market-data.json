@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "fetched_at": "2026-11-06T08:01:48.784006+00:00",
+  "fetched_at": "2026-11-06T16:01:47.961991+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
@@ -35,9 +35,9 @@
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-11-06T08:01:48.784006+00:00",
+  "bundle_fetched_at": "2026-11-06T16:01:47.961991+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-11-06T08:01:48.784006+00:00",
+  "rates_fetched_at": "2026-11-06T16:01:47.961991+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -354,6 +354,14 @@
         "previous": ""
       },
       {
+        "title": "FOMC Member Daly Speaks",
+        "country": "USD",
+        "date": "2026-11-06T18:00:00+00:00",
+        "impact": "Low",
+        "forecast": "",
+        "previous": ""
+      },
+      {
         "title": "Consumer Credit m/m",
         "country": "USD",
         "date": "2026-11-06T20:00:00+00:00",
@@ -362,34 +370,42 @@
         "previous": "8.3B"
       }
     ],
-    "fetched_at": "2026-11-06T08:01:48.784006+00:00",
+    "fetched_at": "2026-11-06T16:01:47.961991+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-11-06T08:01:48.784006+00:00",
+    "fetched_at": "2026-11-06T16:01:47.961991+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-11-06T08:01:48.784006+00:00"
+        "fetched_at": "2026-11-06T16:01:47.961991+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-11-06T08:01:48.784006+00:00"
+        "fetched_at": "2026-11-06T16:01:47.961991+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-11-06T08:01:48.784006+00:00"
+        "fetched_at": "2026-11-06T16:01:47.961991+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-11-06T08:01:48.784006+00:00"
+        "fetched_at": "2026-11-06T16:01:47.961991+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-11-06T08:01:48.784006+00:00"
+        "fetched_at": "2026-11-06T16:01:47.961991+00:00"
       }
     },
     "items": [
+      {
+        "title": "Payroll employment rises by 165,000 in October; unemployment rate changes little at 4.1%",
+        "url": "https://www.bls.gov/news.release/archives/empsit_11062026.htm",
+        "published_at": "2026-11-06T12:50:31.965000+00:00",
+        "source": "BLS 雇用統計",
+        "summary": "Total nonfarm payroll employment rose by 165,000 in October, and the unemployment rate changed little at 4.1 percent. Employment increased in professional and business services, in health care, and in transportation and warehousing.",
+        "feed": "bls_jobs"
+      },
       {
         "title": "Federal Reserve issues FOMC statement",
         "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
