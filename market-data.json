@@ -1,43 +1,43 @@
 {
   "version": 1,
-  "fetched_at": "2026-11-05T18:50:58.028449+00:00",
+  "fetched_at": "2026-11-06T00:26:19.685740+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
       "latest": {
-        "date": "2026-11-03",
-        "value": 4.61
+        "date": "2026-11-04",
+        "value": 4.58
       },
       "previous": {
-        "date": "2026-11-02",
-        "value": 4.59
+        "date": "2026-11-03",
+        "value": 4.61
       }
     },
     "DGS10": {
       "latest": {
-        "date": "2026-11-03",
-        "value": 4.95
+        "date": "2026-11-04",
+        "value": 4.9
       },
       "previous": {
-        "date": "2026-11-02",
-        "value": 4.91
+        "date": "2026-11-03",
+        "value": 4.95
       }
     },
     "DFII10": {
       "latest": {
-        "date": "2026-11-03",
-        "value": 2.65
+        "date": "2026-11-04",
+        "value": 2.64
       },
       "previous": {
-        "date": "2026-11-02",
-        "value": 2.62
+        "date": "2026-11-03",
+        "value": 2.65
       }
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-11-05T18:50:58.028449+00:00",
+  "bundle_fetched_at": "2026-11-06T00:26:19.685740+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-11-05T18:50:58.028449+00:00",
+  "rates_fetched_at": "2026-11-06T00:26:19.685740+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -362,31 +362,31 @@
         "previous": "8.3B"
       }
     ],
-    "fetched_at": "2026-11-05T18:50:58.028449+00:00",
+    "fetched_at": "2026-11-06T00:26:19.685740+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-11-05T18:50:58.028449+00:00",
+    "fetched_at": "2026-11-06T00:26:19.685740+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-11-05T18:50:58.028449+00:00"
+        "fetched_at": "2026-11-06T00:26:19.685740+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-11-05T18:50:58.028449+00:00"
+        "fetched_at": "2026-11-06T00:26:19.685740+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-11-05T18:50:58.028449+00:00"
+        "fetched_at": "2026-11-06T00:26:19.685740+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-11-05T18:50:58.028449+00:00"
+        "fetched_at": "2026-11-06T00:26:19.685740+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-11-05T18:50:58.028449+00:00"
+        "fetched_at": "2026-11-06T00:26:19.685740+00:00"
       }
     },
     "items": [
