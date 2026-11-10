@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "fetched_at": "2026-11-10T13:37:59.786316+00:00",
+  "fetched_at": "2026-11-10T20:55:06.328132+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
@@ -35,9 +35,9 @@
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-11-10T13:37:59.786316+00:00",
+  "bundle_fetched_at": "2026-11-10T20:55:06.328132+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-11-10T13:37:59.786316+00:00",
+  "rates_fetched_at": "2026-11-10T20:55:06.328132+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -164,18 +164,18 @@
       {
         "title": "ADP Weekly Employment Change",
         "country": "USD",
-        "date": "2026-11-10T13:15:00+00:00",
+        "date": "2026-11-10T13:14:00+00:00",
         "impact": "Low",
         "forecast": "",
-        "previous": ""
+        "previous": "16.8K"
       },
       {
         "title": "ADP Weekly Employment Change",
         "country": "USD",
-        "date": "2026-11-10T13:16:00+00:00",
+        "date": "2026-11-10T13:15:00+00:00",
         "impact": "Low",
         "forecast": "",
-        "previous": "16.8K"
+        "previous": "19.5K"
       },
       {
         "title": "Core CPI m/m",
@@ -434,34 +434,42 @@
         "previous": ""
       }
     ],
-    "fetched_at": "2026-11-10T13:37:59.786316+00:00",
+    "fetched_at": "2026-11-10T20:55:06.328132+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-11-10T13:37:59.786316+00:00",
+    "fetched_at": "2026-11-10T20:55:06.328132+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-11-10T13:37:59.786316+00:00"
+        "fetched_at": "2026-11-10T20:55:06.328132+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-11-10T13:37:59.786316+00:00"
+        "fetched_at": "2026-11-10T20:55:06.328132+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-11-10T13:37:59.786316+00:00"
+        "fetched_at": "2026-11-10T20:55:06.328132+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-11-10T13:37:59.786316+00:00"
+        "fetched_at": "2026-11-10T20:55:06.328132+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-11-10T13:37:59.786316+00:00"
+        "fetched_at": "2026-11-10T20:55:06.328132+00:00"
       }
     },
     "items": [
+      {
+        "title": "Bowman, The U.S. Economy and Considerations for Monetary Policy",
+        "url": "https://www.federalreserve.gov/newsevents/speech/bowman20261110a.htm",
+        "published_at": "2026-11-10T20:30:00+00:00",
+        "source": "FRB 講演",
+        "summary": "Speech At the C. Peter McColough Series on International Economics Council on Foreign Relations, Washington, D.C.",
+        "feed": "fed_speeches"
+      },
       {
         "title": "CPI for all items increases 0.4% in October; shelter rises",
         "url": "https://www.bls.gov/news.release/archives/cpi_11102026.htm",
@@ -580,14 +588,6 @@
         "published_at": "2026-10-01T14:00:00+00:00",
         "source": "FRB 講演",
         "summary": "Speech At \"Navigating Trust, AI and Storytelling in a World of Data,\" FRED Con 2026, Federal Reserve Bank of St. Louis, St. Louis, Missouri",
-        "feed": "fed_speeches"
-      },
-      {
-        "title": "Cook, The Dual Mandate in Rural America",
-        "url": "https://www.federalreserve.gov/newsevents/speech/cook20260930a.htm",
-        "published_at": "2026-09-30T19:25:00+00:00",
-        "source": "FRB 講演",
-        "summary": "Speech At the 2026 Investing in Rural America Conference, Federal Reserve Bank of Richmond, Asheville, North Carolina",
         "feed": "fed_speeches"
       }
     ]
