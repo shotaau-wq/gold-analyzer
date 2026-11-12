@@ -1,127 +1,280 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0c1422"><title>GOLD AI ANALYZER v27</title><style>
-:root{color-scheme:dark;--bg:#0c1422;--panel:#18263a;--edge:#35465d;--text:#f6f8fc;--muted:#b1bfd0;--gold:#f2ca78;--green:#75deb7;--red:#ffa6a6}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px -apple-system,BlinkMacSystemFont,sans-serif}main{max-width:660px;margin:auto;padding:18px 14px 70px}h1{font-size:23px;color:var(--gold);margin:3px 0}h2{font-size:17px;margin:0 0 12px}p{line-height:1.7}small,.muted{color:var(--muted);font-size:12px;line-height:1.7}.card{background:var(--panel);border:1px solid var(--edge);border-radius:16px;padding:15px;margin:11px 0}.hero{border-color:#957b46;background:linear-gradient(135deg,#273448,#18263a)}.row{display:flex;align-items:center;justify-content:space-between;gap:12px}.big{font-size:29px;font-weight:800;margin:6px 0}.pill{font-size:11px;border:1px solid #63748a;padding:5px 8px;border-radius:20px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.kv{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid #33465e;font-size:13px}.kv b{text-align:right;overflow-wrap:anywhere}.green{color:var(--green)}.red{color:var(--red)}.gold{color:var(--gold)}button,input,select{font:inherit}button{background:var(--gold);color:#162235;border:0;border-radius:10px;padding:13px;font-weight:750;cursor:pointer;width:100%}button:disabled{opacity:.5}input,select{width:100%;background:#0c192b;color:white;border:1px solid #62718a;border-radius:9px;padding:12px;margin:7px 0 12px}details>summary{cursor:pointer;font-weight:700}details[open]>summary{margin-bottom:14px}a{color:var(--gold)}.note{padding:11px;border-left:3px solid var(--gold);background:#101d30;border-radius:8px;font-size:13px;line-height:1.7}.status{font-size:12px;color:var(--muted)}.hidden{display:none}iframe{width:100%;height:720px;border:1px solid var(--edge);border-radius:12px;background:white}.warn{color:#ffd29d}.stale{opacity:.5}.meta{font-size:12px;line-height:1.7;color:var(--muted)}
-
-/* v23: mobile-first readable dashboard */
-body{font-size:16px;line-height:1.55;background:#091321}main{max-width:760px;padding:16px 13px 90px}h1{font-size:26px;letter-spacing:.3px}h2{font-size:19px}small,.muted{font-size:13px;line-height:1.6}.card{padding:18px;margin:13px 0;border-radius:17px;box-shadow:0 4px 18px #0002}.big{font-size:34px;letter-spacing:.4px}.kv{font-size:14px;padding:11px 0;align-items:center}.kv b{font-size:16px;font-variant-numeric:tabular-nums}.grid{gap:12px}.grid>.card{min-width:0;padding:13px}.grid .kv{display:block}.grid .kv b{display:block;text-align:left;margin-top:5px;overflow-wrap:anywhere;font-size:16px}.pill{font-size:12px}.note{font-size:14px}.tfcard{border:1px solid #405873;background:#101f33;border-radius:13px;padding:14px;margin:12px 0;line-height:1.8}.tfcard b{font-size:16px}.livepanel{border-color:#4c7890;background:linear-gradient(120deg,#152d42,#172337)}.liveprice{font-size:38px;font-weight:800;font-variant-numeric:tabular-nums;color:#f2ca78}.datachip{display:inline-block;background:#263c52;border:1px solid #527087;padding:5px 10px;border-radius:20px;font-size:12px}.livehint{font-size:12px;color:#b7c7d8}button{min-height:48px}details>summary{font-size:16px}
-@media(max-width:370px){.grid{grid-template-columns:1fr}.grid .kv{display:flex}.grid .kv b{text-align:right;margin-top:0}.liveprice{font-size:33px}}
-.kv:has(> #trendSl),.kv:has(> #trendTp),.kv:has(> #revSl),.kv:has(> #revTp){display:none}
-
-/* v26: smartphone-first compact quote board */
-.tf-section{padding:14px 12px}.tf-section>.muted{margin:8px 0 14px}
-.tf-section .tile{background:#0d1b2e;border:1px solid #3b506a;border-radius:15px;padding:14px 12px!important;margin-bottom:12px!important}
-.tf-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}.tf-head strong{font-size:20px;color:#f7f9ff}.tf-head span{font-size:11px;color:#c3d0df;text-align:right}
-.tf-prices{display:grid;grid-template-columns:1fr 1fr;gap:9px}.tf-quote{min-width:0;background:#162941;border-radius:12px;padding:12px 9px;border:1px solid #3d5871}.tf-quote.trend{border-top:3px solid #75deb7}.tf-quote.reverse{border-top:3px solid #ffa6a6}.tf-label{font-size:15px;font-weight:800;margin-bottom:7px}.tf-quote.trend .tf-label{color:#75deb7}.tf-quote.reverse .tf-label{color:#ffa6a6}.tf-num{font-size:clamp(20px,5.4vw,30px);font-weight:850;font-variant-numeric:tabular-nums;letter-spacing:-.8px;overflow-wrap:anywhere;line-height:1.2}.tf-sub{font-size:11px;color:#b5c4d5;margin-top:6px}.tf-foot{font-size:11px;color:#b7c7d9;line-height:1.6;margin-top:10px}
-@media(max-width:390px){.tf-num{font-size:21px}.tf-quote{padding:10px 7px}.tf-head strong{font-size:18px}}
-
-/* v26: directional strength and highlighted candidate zones */
-.hero{display:none!important}.livepanel{padding:12px 14px}.livepanel h2{font-size:14px}.liveprice{font-size:31px}.livehint{display:none}.tf-section{margin-top:8px}.tf-head{justify-content:flex-start;flex-wrap:wrap}.tf-head span{font-size:14px;font-weight:750;text-align:left}.tf-head .up{color:#75deb7}.tf-head .down{color:#ffa6a6}.tf-head .flat{color:#b1bfd0}.strength-track{height:6px;background:#304156;border-radius:12px;overflow:hidden;margin-bottom:11px}.strength-fill{height:100%;border-radius:12px;background:#8495a9}.strength-fill.up{background:#75deb7}.strength-fill.down{background:#ffa6a6}.tf-quote.trend,.tf-quote.reverse{border-top:0}.tf-quote.favored.buy{border:2px solid #75deb7;background:#123c35}.tf-quote.favored.sell{border:2px solid #ffa6a6;background:#432c39}.tf-quote.caution{opacity:.77}.tf-label{font-size:13px}.tf-num{font-size:clamp(14px,3.5vw,22px);letter-spacing:-.6px;white-space:nowrap;overflow-wrap:normal}.tf-quote{padding:11px 8px}.tf-sub{font-size:11px}.tf-foot{font-size:11px}.tf-quote .tag{display:inline-block;font-size:10px;font-weight:800;margin-top:5px}.tf-quote .tag.buy{color:#75deb7}.tf-quote .tag.sell{color:#ffa6a6}@media(max-width:390px){.tf-num{font-size:clamp(13px,3.55vw,17px)}}
-</style></head><body><main>
-<header class="row"><div><small>しょうたの相場分析 / シンプル表示 v26</small><h1>GOLD AI ANALYZER</h1></div><span id="state" class="pill">未取得</span></header>
-<section class="card livepanel" aria-live="polite"><div class="row"><h2 style="margin:0">現在の参考価格</h2><span id="liveState" class="datachip">未取得</span></div><div id="livePrice" class="liveprice">--.--</div><div id="liveTime" class="muted">リアルタイム配信ではありません</div><div id="liveDistance" class="note" style="margin-top:12px">エントリー候補との距離：分析待ち</div><p class="livehint">Twelve Dataの価格APIから取得。配信遅延・更新間隔はAPI契約に依存します。確定足の終値とは別の数値です。</p></section>
-<section class="card hero"><div class="row"><small>XAU/USD・Twelve Data参考価格</small><span class="pill">確定足のみ</span></div><div id="price" class="big">--.--</div><div id="time" class="meta">価格未取得</div><hr style="border:0;border-top:1px solid #506078"><small>先出し分析（条件付きシナリオ）</small><div id="bias" class="big gold">分析待ち</div><div id="overview" class="note">15分足で方向を確認し、5分足で条件を判定します。</div></section>
-<div id="lines" class="grid" style="display:none" aria-hidden="true"><section class="card" style="margin:0"><h2 class="green">順張りライン</h2><div id="trendDir" class="muted">分析待ち</div><div class="kv"><span>ENTRY候補</span><b id="trendEntry">--</b></div><div class="kv"><span>SL参考</span><b id="trendSl">--</b></div><div class="kv"><span>TP1 / TP2</span><b id="trendTp">--</b></div><p id="trendWhy" class="muted"></p></section><section class="card" style="margin:0"><h2 class="red">逆張りライン</h2><div id="revDir" class="muted">分析待ち</div><div class="kv"><span>ENTRY候補</span><b id="revEntry">--</b></div><div class="kv"><span>SL参考</span><b id="revSl">--</b></div><div class="kv"><span>TP1 / TP2</span><b id="revTp">--</b></div><p id="revWhy" class="muted"></p></section></div>
-<section class="card tf-section"><div class="row"><h2 style="margin:0">時間足別ENTRY候補</h2><span id="multiState" class="pill">未取得</span></div><p class="muted">方向・勢いと順張り／逆張りゾーン。色付きは優先監視の候補です。勝率を示すものではありません。</p><div id="tf15" class="tile" style="margin-bottom:9px">15分足：待機</div><div id="tf5" class="tile" style="margin-bottom:9px">5分足：待機</div><div id="tf1" class="tile">1分足：待機</div><p id="multiInfo" class="muted">1分足は別APIリクエストで取得。無料枠不足時は1分足のみ保留。</p></section>
-<section class="card"><div class="row"><h2 style="margin:0">プライスアクション</h2><span id="paStatus" class="pill">待機</span></div><p id="pa" class="note">ローソク足の確定後に判定します。</p><small>包み足・ピンバー・高値安値ブレイク・リテストを参考判定。反転・継続を保証するものではありません。</small></section>
-<button id="refresh">今すぐ分析を更新</button><p id="status" class="status">下の「初期設定」でTwelve DataのAPIキーを入力してください。</p>
-<details class="card"><summary>フィボナッチ・EMA・RSI・ATR</summary><div id="indicators">取得待ち</div><p class="muted">フィボは確定15分足の直近50本の高値・安値を使用。相場構造のスイング確定ではありません。</p></details>
-<details class="card"><summary>サポート・レジスタンスと判定条件</summary><div id="levels">取得待ち</div><p class="muted">価格帯は5分足の直近20本の高値・安値とATRで算出。候補ゾーンであり、指値注文の推奨ではありません。</p></details>
-<details class="card"><summary>旧版の詳細分析・注文板・CVD・ファンダ</summary><p class="muted">既存の <code>gold_analyzer.html</code> をそのまま利用します。</p><p><a href="./gold_analyzer.html" target="_blank" rel="noopener">旧版GOLD / BTC ANALYZERを開く</a></p><button id="showOld" style="background:#2c3d55;color:white">この画面内で開く / 閉じる</button><div id="oldWrap" class="hidden" style="margin-top:12px"><iframe title="旧版の詳細分析" loading="lazy" src="about:blank" data-src="./gold_analyzer.html"></iframe></div></details>
-<details class="card" id="settings" open><summary>初期設定</summary><label for="key">Twelve Data APIキー</label><input id="key" type="password" autocomplete="off" placeholder="APIキーを貼り付け"><p class="muted">キーはこの端末のブラウザ内に保存します。GitHubの公開コードには書かないでください。API無料枠で履歴や呼び出し数に制限がある場合は分析を保留します。</p><label for="quoteInterval">参考価格の自動取得</label><select id="quoteInterval"><option value="0">OFF（API枠節約）</option><option value="60">60秒ごと（通信量多め）</option><option value="120" selected>120秒ごと</option><option value="300">5分ごと</option></select><p class="muted">価格APIは別途呼び出し回数を消費します。無料枠の上限に達したら取得停止・エラー表示します。1〜5秒単位のティック配信は行いません。</p><label for="interval">5分・15分足の確定分析</label><select id="interval"><option value="5">5分足確定後（約45秒後＋遅延時再確認）</option><option value="15">15分ごと（節約）</option><option value="30">30分ごと</option></select><button id="save">設定を保存して分析開始</button><p class="muted">Safariを閉じると更新停止。5分足は確定後45秒と2分後に確認します（無料APIの回数制限に注意）。1分足は画面表示中、約1分ごとに独立更新します。5分足・15分足は確定後に再分析します。</p></details>
-<p class="muted">注意：ルールベースの条件付きシナリオであり、将来価格の予知ではありません。XAU/USD参考価格とXSの約定価格には差があります。価格が古い・APIが失敗・履歴不足の場合は数値を消して分析を保留します。</p>
-</main><script>
+<!doctype html>
+<html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GTM v21.9｜5分足候補</title>
+<style>
+:root{color-scheme:dark;font:16px system-ui;background:#0e121a;color:#eef2f8}main{max-width:560px;margin:auto;padding:22px}h1{font-size:24px;margin:6px 0}header p,small{color:#aab8cc}section,details{background:#171f2c;border:1px solid #303c50;border-radius:16px;padding:16px;margin:12px 0}h2{font-size:16px;margin:0 0 8px}.price{font-size:32px;font-weight:750;font-variant-numeric:tabular-nums}.buy{color:#82e4bd}.sell{color:#ffabae}p{line-height:1.55;margin:8px 0}label{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:12px 0}input:not([type=checkbox]){width:90px}input[type=password]{width:52%}input,button{font:inherit;padding:8px;border:1px solid #51617a;border-radius:8px}button,summary{cursor:pointer}button{background:#253653}summary{font-weight:700}
+</style>
+<main>
+<header><small>XAU/USD · GTM v21.9</small><h1>5分足エントリー候補</h1><p id="status" role="status">APIキーを設定すると取得を開始します</p><button id="refresh">更新</button></header>
+<div id="results" aria-live="polite"></div>
+<details id="settings"><summary>⚙ GTM設定</summary>
+<form id="form"><label>Twelve Data APIキー <input id="key" type="password" autocomplete="off" required></label><div id="fields"></div><button>保存して更新</button></form>
+</details>
+</main>
+<script>
 'use strict';
-const $=id=>document.getElementById(id),f=x=>Number.isFinite(x)?x.toFixed(2):'--',keyName='gold_v20_api_key',intName='gold_v27_interval';
-$('key').value=localStorage.getItem(keyName)||'';$('interval').value=localStorage.getItem(intName)||'5';if($('key').value)$('settings').open=false;
-function ema(a,n){if(a.length<n)return NaN;let v=a.slice(0,n).reduce((s,x)=>s+x,0)/n,k=2/(n+1);for(let i=n;i<a.length;i++)v=k*a[i]+(1-k)*v;return v}
-function rsi(a,n=14){if(a.length<=n)return NaN;let g=0,l=0;for(let i=1;i<=n;i++){let d=a[i]-a[i-1];g+=Math.max(0,d);l+=Math.max(0,-d)}g/=n;l/=n;for(let i=n+1;i<a.length;i++){let d=a[i]-a[i-1];g=(g*(n-1)+Math.max(0,d))/n;l=(l*(n-1)+Math.max(0,-d))/n}return l===0?(g===0?50:100):100-100/(1+g/l)}
-function atr(rows,n=14){if(rows.length<=n)return NaN;let tr=[];for(let i=1;i<rows.length;i++)tr.push(Math.max(rows[i].high-rows[i].low,Math.abs(rows[i].high-rows[i-1].close),Math.abs(rows[i].low-rows[i-1].close)));let v=tr.slice(0,n).reduce((a,b)=>a+b,0)/n;for(let i=n;i<tr.length;i++)v=(v*(n-1)+tr[i])/n;return v}
-function aggregate15(rows){const m=new Map();for(const r of rows){let k=Math.floor(r.t/900000)*900000;if(!m.has(k))m.set(k,[]);m.get(k).push(r)}return [...m].sort((a,b)=>a[0]-b[0]).filter(([k,g])=>g.length===3&&g[0].t===k&&g[1].t===k+300000&&g[2].t===k+600000).map(([t,g])=>({t,open:g[0].open,high:Math.max(...g.map(x=>x.high)),low:Math.min(...g.map(x=>x.low)),close:g[2].close}))}
-function setLine(prefix,dir,entry,sl,tp1,tp2,why){$(prefix+'Dir').textContent=dir;$(prefix+'Entry').textContent=entry;$(prefix+'Sl').textContent=sl;$(prefix+'Tp').textContent=tp1+' / '+tp2;$(prefix+'Why').textContent=why}
-function reset(reason){$('state').textContent='分析保留';$('price').textContent='--.--';$('time').textContent='価格・確定足を確認できません';$('bias').textContent='分析保留';$('bias').className='big gold';$('overview').textContent=reason;for(const p of ['trend','rev'])setLine(p,'データ未確認','--','--','--','--','更新後に再判定します');$('pa').textContent='データ未確認';$('paStatus').textContent='保留';$('indicators').textContent='取得待ち';$('levels').textContent='取得待ち'}
-function paJudge(rows,high,low,vol){const a=rows.at(-1),b=rows.at(-2),body=Math.abs(a.close-a.open),range=a.high-a.low||1,upper=a.high-Math.max(a.open,a.close),lower=Math.min(a.open,a.close)-a.low;let out=[];if(b.close<b.open&&a.close>a.open&&a.open<=b.close&&a.close>=b.open)out.push('強気の包み足');if(b.close>b.open&&a.close<a.open&&a.open>=b.close&&a.close<=b.open)out.push('弱気の包み足');if(lower/range>.55&&body/range<.35)out.push('下ヒゲ優勢のピンバー候補');if(upper/range>.55&&body/range<.35)out.push('上ヒゲ優勢のピンバー候補');if(a.close>high)out.push('直近高値を終値で上抜け');if(a.close<low)out.push('直近安値を終値で下抜け');const prevHigh=Math.max(...rows.slice(-22,-2).map(x=>x.high)),prevLow=Math.min(...rows.slice(-22,-2).map(x=>x.low));if(b.close>prevHigh&&a.low<=prevHigh+vol*.2&&a.close>prevHigh)out.push('上抜け後のリテスト候補');if(b.close<prevLow&&a.high>=prevLow-vol*.2&&a.close<prevLow)out.push('下抜け後のリテスト候補');return out.length?out:['明確な反転・ブレイク形状なし']}
-const div=(name,value)=>'<div class="kv"><span>'+name+'</span><b>'+f(value)+'</b></div>';
-
-function tfClear(){for(const id of ['tf15','tf5','tf1'])$(id).textContent=id.slice(2)+'分足：データ未確認';$('multiState').textContent='保留';$('multiInfo').textContent='価格データが不足・古い・取得失敗。候補を無効化しました。'}
-function trendStrength(rows,dir,v){
- const closes=rows.map(r=>r.close),a=rows.at(-1),prev=rows.at(-6),e=ema(closes,20),old=ema(closes.slice(0,-5),20),r=rsi(closes);
- if(![e,old,r,v].every(Number.isFinite)||!prev)return {level:'判定不可',pct:0};
- // Strength is a descriptive score, NOT a probability or calibrated win rate.
- const slope=Math.abs(e-old)/v,spread=Math.abs(a.close-e)/v;
- const momentum=dir===1?Math.max(0,r-50):Math.max(0,50-r);
- const directionMove=(a.close-prev.close)*dir/v;
- const score=Math.min(100,Math.round(Math.min(35,slope*25)+Math.min(25,spread*13)+Math.min(25,momentum*1.25)+Math.min(15,Math.max(0,directionMove)*5)));
- return {level:score>=65?'強':score>=35?'中':'弱',pct:score};
+const defaults = {
+ trend:[true,'順張り'], reverse:[false,'逆張り'], range:[true,'レンジ'],
+ strict:[true,'厳選モード'], cooldown:[3,'サイン間隔（本）'],
+ adaptive:[true,'相場適応'], block:[true,'急変動時の新規停止'], spike:[1.8,'急変動ATR倍率'],
+ fast:[20,'短期EMA'], slow:[200,'長期EMA'], trendADX:[30,'順張りADX下限'],
+ pullback:[8,'押し目確認期間'], near:[0.5,'EMA接近許容（ATR）'],
+ reverseLen:[12,'逆張り参照期間'], reverseLow:[20,'逆張り買いRSI下限'], reverseHigh:[80,'逆張り売りRSI上限'],
+ rangeLen:[20,'レンジ参照期間'], rangeADX:[23,'レンジADX上限'], edge:[0.4,'レンジ端許容（ATR）'],
+ wick:[0.5,'レンジ反発ヒゲ／実体'], sr:[true,'レジサポを判定に使用'],
+ room:[true,'順張り：近い壁を避ける'], rangeSR:[false,'レンジ：レジサポ接近必須'],
+ left:[3,'ピボット左'], right:[3,'ピボット右'], srNear:[0.7,'レジサポ接近許容（ATR）'],
+ roomR:[0.8,'順張り：次の壁まで最低R'], atr:[14,'ATR期間'], swing:[10,'SLスイング期間'],
+ buffer:[0.2,'構造SL余裕（ATR）'], reward:[0.6,'最低TP1距離（R）'], maxRisk:[3,'最大SL距離（ATR）'],
+ tp1:[1,'順張りTP1（R）'], tp2:[1.8,'順張りTP2（R）'], hold:[12,'最大保有本数']
+};
+const $ = id => document.getElementById(id);
+const keyName = 'gold_v20_api_key', settingsName = 'gtm_v219_safari_settings';
+const integers = new Set(['cooldown','fast','slow','pullback','reverseLen','rangeLen','left','right','atr','swing','hold']);
+let cfg = Object.fromEntries(Object.entries(defaults).map(([k,[v]]) => [k,v]));
+try { Object.assign(cfg, JSON.parse(localStorage.getItem(settingsName) || '{}')); $('key').value = localStorage.getItem(keyName) || ''; } catch {}
+for (const [k,[v,label]] of Object.entries(defaults)) {
+ const row = document.createElement('label'), input = document.createElement('input');
+ input.id = k;
+ if (typeof v === 'boolean') {
+  input.type = 'checkbox';
+  input.checked = cfg[k];
+ } else {
+  input.type = 'number';
+  input.step = integers.has(k) ? '1' : 'any';
+  input.min = ['cooldown','roomR','wick'].includes(k) ? '0' : integers.has(k) ? '1' : '0.01';
+  input.max = integers.has(k) ? '500' : '100';
+  input.value = cfg[k];
+  input.required = true;
+ }
+ row.append(label,input);
+ $('fields').append(row);
 }
-function tfBox(id,label,rows,upperBias){
- if(rows.length<35){$(id).textContent=label+'：確定足が不足';return null}
- const a=rows.at(-1),cl=rows.map(r=>r.close),e=ema(cl,20),v=atr(rows),h=Math.max(...rows.slice(-21,-1).map(r=>r.high)),l=Math.min(...rows.slice(-21,-1).map(r=>r.low));
- if(![e,v,h,l].every(Number.isFinite)||v<=0){$(id).textContent=label+'：計算不可';return null}
- const dir=a.close>=e?1:-1,dirClass=dir===1?'up':'down',buy=dir===1,st=trendStrength(rows,dir,v);
- const aligned=upperBias===null||upperBias===dir;
- const favored=st.level!=='弱'&&aligned;
- // ATR-adaptive zone around EMA20 for continuation, and prior high/low for reversal.
- const pad=Math.max(v*.18,.01),trendLo=e-pad,trendHi=e+pad,revCenter=buy?h:l;
- const revLo=revCenter-pad,revHi=revCenter+pad;
- const trendAction=buy?'押し目買い':'戻り売り',reverseAction=buy?'反落売り':'反発買い';
- const tag=favored?'優勢・監視':'反応確認待ち';
- const alignText=upperBias===null?'基準足':aligned?'15分足と一致':'15分足と不一致';
- const pa=paJudge(rows,h,l,v).join('・');
- $(id).innerHTML='<div class="tf-head"><strong>'+label+'</strong><span class="'+dirClass+'">'+(buy?'↑ 上昇':'↓ 下落')+' ／ 勢い '+st.level+'</span></div>'+
- '<div class="strength-track"><div class="strength-fill '+dirClass+'" style="width:'+st.pct+'%"></div></div>'+
- '<div class="tf-prices">'+
- '<div class="tf-quote trend '+(favored?'favored '+(buy?'buy':'sell'):'caution')+'"><div class="tf-label">順張り・'+(buy?'買い':'売り')+'</div><div class="tf-num">'+f(trendLo)+'〜'+f(trendHi)+'</div><div class="tf-sub">'+trendAction+'</div><div class="tag '+(buy?'buy':'sell')+'">'+tag+'</div></div>'+
- '<div class="tf-quote reverse caution"><div class="tf-label">逆張り・'+(buy?'売り':'買い')+'</div><div class="tf-num">'+f(revLo)+'〜'+f(revHi)+'</div><div class="tf-sub">'+reverseAction+'</div><div class="tag">反転確認待ち</div></div></div>'+
- '<div class="tf-foot">'+alignText+' ／ 確定足 '+new Date(a.t).toLocaleTimeString('ja-JP',{timeZone:'Asia/Tokyo',hour:'2-digit',minute:'2-digit'})+'開始<br>PA：'+pa+'<br>色は指標条件の一致度。到達だけではエントリー条件成立ではありません。</div>';
- return dir
+$('settings').open = !$('key').value;
+const sum = xs => xs.reduce((a,b) => a+b,0);
+const avg = xs => sum(xs)/xs.length;
+const emaStep = (prev,x,n) => prev + (x-prev)*2/(n+1);
+const smooth = (prev,x,n) => (prev*(n-1)+x)/n;
+const num = x => x.toFixed(2);
+const frame = 300000, tick = 0.01;
+function measure(rows) {
+ let fast = rows[0].c, slow = fast;
+ const tr = [], gains = [], losses = [], up = [], down = [], dx = [];
+ return rows.map((b,i) => {
+  const p = rows[i-1];
+  fast = emaStep(fast,b.c,cfg.fast);
+  slow = emaStep(slow,b.c,cfg.slow);
+  const d = p ? b.c-p.c : 0;
+  const high = p ? b.h-p.h : 0, low = p ? p.l-b.l : 0;
+  tr.push(p ? Math.max(b.h-b.l,b.h-p.c,p.c-b.l) : b.h-b.l);
+  gains.push(Math.max(d,0)); losses.push(Math.max(-d,0));
+  up.push(high > Math.max(low,0) ? high : 0);
+  down.push(low > Math.max(high,0) ? low : 0);
+  function w(series,n,start=0) {
+   if (i < start+n-1) return NaN;
+   return i === start+n-1 ? avg(series.slice(start,i+1)) : smooth(series[i-1],series[i],n);
+  }
+  const atr = w(tr,cfg.atr), gain = w(gains,14,1), loss = w(losses,14,1);
+  const plus = w(up,14,1), minus = w(down,14,1);
+  dx.push(plus+minus ? 100*Math.abs(plus-minus)/(plus+minus) : 0);
+  const adx = w(dx,14,14);
+  for (const [series,value] of [[tr,atr],[gains,gain],[losses,loss],[up,plus],[down,minus],[dx,adx]])
+   if (Number.isFinite(value)) series[i]=value;
+  return {...b,fast,slow,atr,adx,plus,minus,gain,loss,rsi:loss===0 ? 100 : gain===0 ? 0 : 100-100/(1+gain/loss)};
+ });
 }
-async function loadOneMinute(key,refTime,upperDir){
- $('tf1').textContent='1分足：取得中';try{
- const c=new AbortController(),timer=setTimeout(()=>c.abort(),18000);
- let d;try{const u='https://api.twelvedata.com/time_series?symbol=XAU%2FUSD&interval=1min&outputsize=120&timezone=UTC&order=asc&apikey='+encodeURIComponent(key);const r=await fetch(u,{cache:'no-store',signal:c.signal});if(!r.ok)throw Error('HTTP '+r.status);d=await r.json()}finally{clearTimeout(timer)}
- if(d.status==='error'||!Array.isArray(d.values))throw Error(d.message||'1分足データなし');
- const now=Date.now(),seen=new Set(),rows=d.values.map(x=>({t:Date.parse(x.datetime.replace(' ','T')+'Z'),open:+x.open,high:+x.high,low:+x.low,close:+x.close})).filter(x=>[x.t,x.open,x.high,x.low,x.close].every(Number.isFinite)&&x.high>=Math.max(x.open,x.close)&&x.low<=Math.min(x.open,x.close)&&x.t+60000<=now).sort((a,b)=>a.t-b.t).filter(x=>{if(seen.has(x.t))return false;seen.add(x.t);return true});
- if(rows.length<35)throw Error('1分足35本未満');if(now-(rows.at(-1).t+60000)>240000)throw Error('1分足が4分以上古い');for(let i=rows.length-20;i<rows.length;i++)if(rows[i].t-rows[i-1].t!==60000)throw Error('直近1分足に欠損');
- if(refTime!==lastFetchedBar)throw Error('5分足データが更新されたため再取得待ち');tfBox('tf1','1分足',rows,upperDir);$('multiInfo').textContent='1分足 '+rows.length+'本取得。5分足と1分足は別々のAPI呼び出しです。';
- }catch(e){$('tf1').textContent='1分足：保留（'+String(e.message).replaceAll(key,'[非表示]')+'）';$('multiInfo').textContent='1分足は無料枠・通信・市場休場などで取得できない場合があります。5分・15分足の表示には影響しません。'}
+function aggregate(rows,ms) {
+ const groups = new Map();
+ for (const b of rows) {
+  const t = Math.floor(b.t/ms)*ms, g = groups.get(t);
+  groups.set(t,g ? {...g,c:b.c,h:Math.max(g.h,b.h),l:Math.min(g.l,b.l)} : {...b,t});
+ }
+ return [...groups.values()];
 }
-
-let busy=false,timer=null,lastFetchedBar=null;
-let quoteTimer=null,minuteTimer=null,quoteBusy=false,minuteBusy=false,latestUpperDir=null,latestQuote=null,latestQuoteAt=0;
-$('quoteInterval').value=localStorage.getItem('gold_v23_quote_interval')||'120';
-function showDistance(){
- if(!Number.isFinite(latestQuote)||!latestQuoteAt||Date.now()-latestQuoteAt>360000){$('liveDistance').textContent='エントリー候補との距離：最新価格なし';return}
- const entries=[['順張り',$('trendEntry').textContent],['逆張り',$('revEntry').textContent]];
- const out=[];for(const [name,v] of entries){const a=v.match(/(-?\d+(?:\.\d+)?)\s*[〜~]\s*(-?\d+(?:\.\d+)?)/);if(!a)continue;const lo=Math.min(+a[1],+a[2]),hi=Math.max(+a[1],+a[2]);const dist=latestQuote<lo?lo-latestQuote:latestQuote>hi?latestQuote-hi:0;out.push(name+'：'+(dist===0?'候補帯に到達（反応確認待ち）':'候補帯まで '+f(dist)+' ドル'))}
- $('liveDistance').textContent=out.length?out.join(' ／ '):'エントリー候補との距離：分析待ち';
+function pivots(rows) {
+ let high,low;
+ for (let i=cfg.left;i+cfg.right<rows.length;i++) {
+  const window = rows.slice(i-cfg.left,i+cfg.right+1), p = rows[i];
+  if (window.every((b,j) => j<=cfg.left ? b.h<=p.h : b.h<p.h)) high=p.h;
+  if (window.every((b,j) => j<=cfg.left ? b.l>=p.l : b.l>p.l)) low=p.l;
+ }
+ return [high,low].filter(Number.isFinite);
 }
-async function fetchQuote(){
- if(quoteBusy||document.hidden||!$('key').value.trim()||+$('quoteInterval').value===0)return;
- quoteBusy=true;const key=$('key').value.trim();const c=new AbortController(),t=setTimeout(()=>c.abort(),12000);
- try{const r=await fetch('https://api.twelvedata.com/price?symbol=XAU%2FUSD&apikey='+encodeURIComponent(key),{signal:c.signal,cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();if(d.status==='error')throw Error(d.message||'API制限');const price=Number(d.price);if(!Number.isFinite(price)||price<=0)throw Error('有効な価格なし');latestQuote=price;latestQuoteAt=Date.now();$('livePrice').textContent=f(price);$('liveTime').textContent='取得 '+new Date().toLocaleTimeString('ja-JP')+' ／ 配信遅延は不明';$('liveState').textContent='参考価格取得OK';showDistance();}
- catch(e){latestQuote=null;latestQuoteAt=0;$('livePrice').textContent='--.--';$('liveState').textContent='取得保留';$('liveTime').textContent='価格API：'+String(e.message).replaceAll(key,'[非表示]');showDistance();}
- finally{clearTimeout(t);quoteBusy=false}
+function context(history,t) {
+ const p=history.at(-1), h15=aggregate(history,frame*3).filter(b=>b.t+frame*3<=t);
+ const h60=aggregate(history,frame*12).filter(b=>b.t+frame*12<=t);
+ const higher=h15.length?measure(h15).at(-1):{}, past=history.slice(-cfg.pullback);
+ const span=(n,key,fn)=>fn(...history.slice(-n).map(b=>b[key]));
+ return {p,higher,past,span,history,levels:[...pivots(h15),...pivots(h60)]};
 }
-async function refreshMinute(){if(minuteBusy||busy||document.hidden||!$('key').value.trim()||lastFetchedBar===null||latestUpperDir===null)return;minuteBusy=true;try{await loadOneMinute($('key').value.trim(),lastFetchedBar,latestUpperDir)}finally{minuteBusy=false}}
-function scheduleFast(){clearInterval(quoteTimer);clearInterval(minuteTimer);quoteTimer=null;minuteTimer=null;if(document.hidden||!$('key').value.trim())return;const qi=Number($('quoteInterval').value);if(qi>0)quoteTimer=setInterval(fetchQuote,qi*1000);else{$('liveState').textContent='自動取得OFF';$('liveTime').textContent='参考価格の取得を停止中';latestQuote=null;latestQuoteAt=0;$('livePrice').textContent='--.--';showDistance()}minuteTimer=setInterval(refreshMinute,60000)}
-
-async function update(){if(busy||document.hidden)return;const key=$('key').value.trim();if(!key){$('settings').open=true;$('status').textContent='APIキーを入力してください';return}busy=true;$('refresh').disabled=true;$('state').textContent='取得中';try{
-const url='https://api.twelvedata.com/time_series?symbol=XAU%2FUSD&interval=5min&outputsize=800&timezone=UTC&order=asc&apikey='+encodeURIComponent(key);
-const c=new AbortController(),t=setTimeout(()=>c.abort(),20000);let data;try{const r=await fetch(url,{signal:c.signal,cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);data=await r.json()}finally{clearTimeout(t)}if(data.status==='error'||!Array.isArray(data.values))throw Error(data.message||'価格取得に失敗');
-const now=Date.now(),seen=new Set(),rows=data.values.map(x=>({t:Date.parse(x.datetime.replace(' ','T')+'Z'),open:Number(x.open),high:Number(x.high),low:Number(x.low),close:Number(x.close)})).filter(x=>[x.t,x.open,x.high,x.low,x.close].every(Number.isFinite)&&x.high>=Math.max(x.open,x.close)&&x.low<=Math.min(x.open,x.close)&&x.t+300000<=now).sort((a,b)=>a.t-b.t).filter(x=>{if(seen.has(x.t))return false;seen.add(x.t);return true});
-if(rows.length<620)throw Error('必要な5分足履歴が不足（620本以上）。APIの取得上限を確認');for(let i=Math.max(1,rows.length-20);i<rows.length;i++)if(rows[i].t-rows[i-1].t!==300000)throw Error('直近20本の5分足に欠損があります。市場休場明けは履歴が揃うまで保留');
-const r15=aggregate15(rows);if(r15.length<205)throw Error('15分EMA200に必要な確定足が不足');const last=rows.at(-1),age=now-(last.t+300000);
-// 5分足が確定してから90秒を過ぎても直前の足が未配信なら古い候補を無効化
-const currentBucket=Math.floor(now/300000)*300000;
-const expectedStart=currentBucket-300000;
-if(now-currentBucket>=90000&&last.t<expectedStart)throw Error('5分足の配信遅延：最新は '+new Date(last.t).toLocaleTimeString('ja-JP',{timeZone:'Asia/Tokyo',hour:'2-digit',minute:'2-digit'})+'開始。APIの新しい確定足を待っています');
-if(age>1200000)throw Error('確定足が20分以上古いため保留（市場休場またはAPI遅延）');
-const closes=rows.map(x=>x.close),c15=r15.map(x=>x.close),e5=ema(closes,20),e200=ema(closes,200),e15=ema(c15,20),e15200=ema(c15,200),rs=rsi(closes),vol=atr(rows),high=Math.max(...rows.slice(-21,-1).map(x=>x.high)),low=Math.min(...rows.slice(-21,-1).map(x=>x.low));if(![e5,e200,e15,e15200,rs,vol,high,low].every(Number.isFinite)||vol<=0)throw Error('計算結果が不正');
-const up=last.close>e5&&e5>e200&&r15.at(-1).close>e15&&e15>e15200,down=last.close<e5&&e5<e200&&r15.at(-1).close<e15&&e15<e15200,bias=up?'上方向優勢':down?'下方向優勢':'方向混在・様子見';$('price').textContent=f(last.close);$('time').textContent='確定5分足 '+new Date(last.t).toLocaleString('ja-JP',{timeZone:'Asia/Tokyo'})+' 開始（終値） / 最終取得 '+new Date().toLocaleTimeString('ja-JP');$('bias').textContent=bias;$('bias').className='big '+(up?'green':down?'red':'gold');$('overview').textContent=up?'15分・5分とも上昇基調。EMA20付近の押し目とローソク足の反応を監視。':down?'15分・5分とも下降基調。EMA20付近の戻りとローソク足の反応を監視。':'15分足と5分足の方向が一致しないため、先出しは候補表示のみ。';
-const pad=vol*.2,trendUp=up||(!down&&last.close>=e15),entry=trendUp?Math.min(last.close,e5):Math.max(last.close,e5),sl=trendUp?Math.min(low,entry-vol):Math.max(high,entry+vol),risk=Math.abs(entry-sl);setLine('trend',trendUp?'押し目買い候補':'戻り売り候補',f(entry-pad)+'〜'+f(entry+pad),f(sl),f(entry+(trendUp?1:-1)*risk),f(entry+(trendUp?1:-1)*risk*1.8),(up||down?'上位足と一致。':'上位足未一致・慎重に。')+'EMA20付近で5分足の反発・反落確定を待つ。');
-const revUp=last.close<=(high+low)/2,revEntry=revUp?low:high,revSl=revUp?low-vol*.65:high+vol*.65,revRisk=Math.abs(revEntry-revSl);setLine('rev',revUp?'支持帯からの反発候補':'抵抗帯からの反落候補',f(revEntry-pad)+'〜'+f(revEntry+pad),f(revSl),f(revEntry+(revUp?1:-1)*revRisk),f(revEntry+(revUp?1:-1)*revRisk*1.8),'逆張りはヒゲ・包み足などの反転確認が必須。強いトレンド中は不利。');
-const signals=paJudge(rows,high,low,vol);$('pa').textContent=signals.join(' ／ ');$('paStatus').textContent=signals[0].startsWith('明確')?'様子見':'形状検出';const h15=Math.max(...r15.slice(-50).map(x=>x.high)),l15=Math.min(...r15.slice(-50).map(x=>x.low)),span=h15-l15;$('indicators').innerHTML=div('5分 EMA20',e5)+div('5分 EMA200',e200)+div('15分 EMA20',e15)+div('15分 EMA200',e15200)+div('RSI14',rs)+div('ATR14',vol)+div('15分範囲 高値',h15)+div('15分範囲 安値',l15)+[.382,.5,.618,.786].map(n=>div('フィボ '+(n*100).toFixed(1)+'%（高値からの戻し）',h15-span*n)).join('');$('levels').innerHTML=div('直近20本高値',high)+div('直近20本安値',low)+div('ATR緩衝幅',pad);$('state').textContent='分析更新OK';$('status').textContent='分析完了：確定5分足 '+rows.length+'本・確定15分足 '+r15.length+'本。最新足開始 '+new Date(last.t).toLocaleTimeString('ja-JP',{timeZone:'Asia/Tokyo',hour:'2-digit',minute:'2-digit'})+'。';lastFetchedBar=last.t;showDistance();const upperDir=r15.at(-1).close>=e15?1:-1;latestUpperDir=upperDir;tfBox('tf15','15分足',r15,null);tfBox('tf5','5分足',rows,upperDir);$('multiState').textContent='15分・5分更新OK';await loadOneMinute(key,last.t,upperDir);
-}catch(e){reset('データ取得・計算を確認できないため、古いラインは非表示です。');tfClear();latestUpperDir=null;lastFetchedBar=null;showDistance();$('status').textContent='更新失敗：'+String(e.message).replaceAll(key,'[非表示]')}finally{busy=false;$('refresh').disabled=false;schedule()}}
-function nextDelay(){const n=Number($('interval').value),now=Date.now();if(n===5){const bucket=Math.floor(now/300000)*300000;const elapsed=now-bucket;const target=elapsed<45000?bucket+45000:elapsed<120000?bucket+120000:bucket+300000+45000;return Math.max(10000,target-now)}return n*60000}
-function schedule(){clearTimeout(timer);timer=null;if(!document.hidden&&$('key').value.trim())timer=setTimeout(update,nextDelay())}
-$('refresh').onclick=update;$('save').onclick=()=>{localStorage.setItem(keyName,$('key').value.trim());localStorage.setItem(intName,$('interval').value);$('settings').open=false;localStorage.setItem('gold_v23_quote_interval',$('quoteInterval').value);scheduleFast();fetchQuote();update()};$('quoteInterval').onchange=()=>{localStorage.setItem('gold_v23_quote_interval',$('quoteInterval').value);scheduleFast();fetchQuote()};$('interval').onchange=()=>{localStorage.setItem(intName,$('interval').value);schedule()};document.addEventListener('visibilitychange',()=>{schedule();scheduleFast();if(!document.hidden&&$('key').value.trim()){fetchQuote();update()}});$('showOld').onclick=()=>{const w=$('oldWrap');w.classList.toggle('hidden');const i=w.querySelector('iframe');if(!w.classList.contains('hidden')&&i.getAttribute('src')==='about:blank')i.src=i.dataset.src};if($('key').value){scheduleFast();fetchQuote();update();}
-</script></body></html>
+function evaluate(ctx,b) {
+ const {p,higher,past,span,history,levels}=ctx;
+ const a=smooth(p.atr,Math.max(b.h-b.l,b.h-p.c,p.c-b.l),cfg.atr);
+ const high=b.h-p.h,low=p.l-b.l, plus=smooth(p.plus,high>Math.max(low,0)?high:0,14);
+ const minus=smooth(p.minus,low>Math.max(high,0)?low:0,14);
+ const adx=smooth(p.adx,plus+minus?100*Math.abs(plus-minus)/(plus+minus):0,14);
+ const delta=b.c-p.c, gain=smooth(p.gain,Math.max(delta,0),14),loss=smooth(p.loss,Math.max(-delta,0),14);
+ const rsi=loss===0?100:100-100/(1+gain/loss);
+ const fast=emaStep(p.fast,b.c,cfg.fast),slow=emaStep(p.slow,b.c,cfg.slow);
+ const strong=adx>=30, required=cfg.trendADX-(cfg.adaptive&&strong?2:0);
+ if (cfg.block && a>=cfg.spike*avg([...history.slice(-49).map(x=>x.atr),a])) return [];
+ const lo=span(cfg.rangeLen,'l',Math.min),hi=span(cfg.rangeLen,'h',Math.max),mid=(lo+hi)/2;
+ const body=Math.max(tick,Math.abs(b.c-b.o)), candidates=[];
+ const walls=cfg.sr?[...levels,...pivots([...history.slice(-Math.max(100,cfg.left+cfg.right+1)),b])]:[];
+ const support=Math.max(-Infinity,...walls.filter(x=>x<=b.c));
+ const resistance=Math.min(Infinity,...walls.filter(x=>x>b.c));
+ for(const method of ['trend','reverse','range']) for(const d of [1,-1]){
+  if(!cfg[method] || d*(b.c-b.o)<=0) continue;
+  const buy=d===1, extreme=buy?b.l:b.h, wick=buy?Math.min(b.o,b.c)-b.l:b.h-Math.max(b.o,b.c);
+  const wall=buy?resistance:support, back=buy?support:resistance;
+  const edge=buy?lo:hi, prior=span(2,buy?'h':'l',buy?Math.max:Math.min);
+  const sweep=span(cfg.reverseLen,buy?'l':'h',buy?Math.min:Math.max);
+  if(method==='trend'){
+   if(!(d*(fast-slow)>0 && d*(fast-p.fast)>=0 && adx>=Math.max(5,required) &&
+     past.some(x=>d*((buy?x.l:x.h)-x.fast)<=a*cfg.near) && d*(b.c-fast)>0 &&
+     (buy?rsi>=48:rsi<=52))) continue;
+   if(cfg.strict && !(d*(higher.fast-higher.slow)>0 && d*(b.c-prior)>0 && d*(plus-minus)>0)) continue;
+  } else if(method==='reverse'){
+   const recent=[...history.slice(-4).map(x=>x.rsi),rsi];
+   if(!(d*(extreme-sweep)<0 && d*(b.c-sweep)>0 && d*(rsi-p.rsi)>0 &&
+     (buy?Math.min(...recent)<cfg.reverseLow:Math.max(...recent)>cfg.reverseHigh) &&
+     (!cfg.strict||wick>=body*0.5))) continue;
+  } else {
+   if(!(adx<=cfg.rangeADX && hi-lo>=1.5*a && d*(extreme-edge)<=a*cfg.edge &&
+     d*(b.c-edge)>0 && wick>=body*cfg.wick)) continue;
+   if(cfg.strict && !((buy?rsi<48:rsi>52)&&adx<=p.adx)) continue;
+   if(cfg.sr&&cfg.rangeSR&&Math.abs(extreme-back)>a*cfg.srNear) continue;
+  }
+  const base=method==='trend'?span(cfg.swing,buy?'l':'h',buy?Math.min:Math.max):method==='range'?edge:extreme;
+  let stop=(buy?Math.min(base,extreme):Math.max(base,extreme))-d*a*cfg.buffer;
+  if(d*(b.c-back)>0 && d*(b.c-back)<=a*2.5) stop=buy?Math.min(stop,back-a*cfg.buffer):Math.max(stop,back+a*cfg.buffer);
+  const risk=Math.max(d*(b.c-stop),a*0.3);
+  const wallDist=d*(wall-b.c);
+  if(method==='trend'&&cfg.sr&&cfg.room&&wallDist<risk*cfg.roomR) continue;
+  let one=method==='range'?d*(mid-b.c):risk*(method==='trend'?cfg.tp1*(cfg.adaptive&&strong?1.2:1):cfg.adaptive&&strong?0.7:0.8);
+  let two=method==='range'?d*((buy?hi:lo)-b.c)-a*cfg.buffer:risk*(method==='trend'?cfg.tp2*(cfg.adaptive&&strong?1.4:1):cfg.adaptive&&strong?1.2:1.5);
+  if(method==='reverse'&&d*(fast-b.c)>=risk*cfg.reward) one=Math.min(one,d*(fast-b.c));
+  one=Math.min(one,wallDist-a*0.1); two=Math.min(two,wallDist-a*0.1);
+  if(risk>tick && risk<=a*cfg.maxRisk && one>=risk*cfg.reward && two>=one)
+   candidates.push({method,d,entry:b.c,sl:b.c-d*risk,tp1:b.c+d*one,tp2:b.c+d*two});
+ }
+ return candidates;
+}
+function replay(history) {
+ let trade=null,last=-Infinity,latest=null;
+ for(let i=Math.max(cfg.slow*3,history.length-250);i<history.length;i++){
+  const b=history[i];
+  if(trade){
+   const {d,entry,sl,tp1,tp2,partial,start}=trade;
+   const back=d===1?b.l:b.h,front=d===1?b.h:b.l;
+   const reaches1=d*(front-tp1)>=0, reaches2=d*(front-tp2)>=0, atBE=d*(back-entry)<=0;
+   if(d*(back-(partial?entry:sl))<=0||reaches2||(reaches1&&atBE)||i-start>=cfg.hold) trade=null;
+   else if(reaches1) trade.partial=true;
+   continue;
+  }
+  if(i-last<=cfg.cooldown) continue;
+  const hit=evaluate(context(history.slice(0,i),b.t),b)[0];
+  if(hit){last=i;trade={...hit,start:i,partial:false};if(i===history.length-1)latest=hit;}
+ }
+ return {blocked:!!trade||history.length-last<=cfg.cooldown,latest};
+}
+function scenarios(history,bar){
+ const ctx=context(history,bar.t), step=Math.max(tick,Math.round(ctx.p.atr*2)/100);
+ const start=Math.round(bar.c/tick), stride=Math.round(step/tick), best=new Map();
+ const existing=evaluate(ctx,bar)[0];
+ if(existing) best.set(existing.method+existing.d,{...existing,now:true,turn:null,score:0,min:bar.c,max:bar.c});
+ for(const side of [1,-1]){
+  const buy=side===1;
+  const edge=ctx.span(cfg.rangeLen,buy?'l':'h',buy?Math.min:Math.max)+side*ctx.p.atr*cfg.edge;
+  const sweep=ctx.span(cfg.reverseLen,buy?'l':'h',buy?Math.min:Math.max)-side*tick;
+  // Each zone shares one assumed touch price and one contiguous run of closes.
+  const turns=[null];
+  for(let j=0;j<=6;j++) turns.push(Math.round((edge-side*j*ctx.p.atr/4)/tick)*tick);
+  if(cfg.reverse) turns.push(sweep);
+  for(const turn of turns){
+   let run=null;
+   function save(){
+    if(!run)return;
+    const key=run.method+side, previous=best.get(key);
+    if(!previous||run.score<previous.score||(run.score===previous.score&&run.max-run.min>previous.max-previous.min)){
+     best.set(key,{...run,now:!!existing&&existing.method===run.method&&existing.d===side&&run.turn===null&&bar.c>=run.min&&bar.c<=run.max});
+    }
+    run=null;
+   }
+   for(let i=-150;i<=150;i++){
+    const close=(start+i*stride)*tick;
+    const b={...bar,c:close,h:Math.max(bar.h,close,turn??-Infinity),l:Math.min(bar.l,close,turn??Infinity)};
+    const candidate=evaluate(ctx,b)[0];
+    if(!candidate||candidate.d!==side){save();continue;}
+    if(run?.method!==candidate.method)save();
+    const extra=turn===null?0:buy?Math.max(0,bar.l-turn):Math.max(0,turn-bar.h);
+    if(!run)run={...candidate,turn:extra>tick/2?turn:null,min:close,max:close,score:Infinity};
+    run.max=close;
+    run.score=Math.max(run.min-bar.c,bar.c-run.max,0)+extra;
+   }
+   save();
+  }
+ }
+ return [...best.values()].sort((a,b)=>a.score-b.score);
+}
+function render(rows,now) {
+ if(!rows.length)throw Error('5分足データがありません');
+ const history=measure(rows.filter(b=>b.t+frame<=now));
+ const p=history.at(-1);
+ if(!p||history.length<Math.max(250,cfg.slow*3+20,cfg.rangeLen+1,cfg.atr+50,cfg.swing+1,cfg.pullback+1,cfg.reverseLen+1,cfg.left+cfg.right+1))
+  throw Error('5分足の履歴が不足しています');
+ if(now-p.t>frame*2+60000) throw Error('5分足の更新待ち');
+ const t=Math.floor(now/frame)*frame, live=rows.find(b=>b.t===t);
+ const bar=live??{t,o:p.c,h:p.c,l:p.c,c:p.c};
+ const state=replay(history), hits=state.blocked?[]:scenarios(history,bar);
+ const stamp=new Date(p.t+frame).toLocaleTimeString('ja-JP',{timeZone:'Asia/Tokyo',hour:'2-digit',minute:'2-digit'});
+ $('status').textContent=(live?'取得価格 ':'直近終値 ')+num(bar.c)+' ／ 確定足 '+stamp+' JST';
+ const labels={trend:'順張り',reverse:'逆張り',range:'レンジ'};
+ $('results').innerHTML=hits.map(x=>{
+  const side=x.d===1?'買い':'売り', color=x.d===1?'buy':'sell';
+  const distance=bar.c<x.min?x.min-bar.c:bar.c>x.max?x.max-bar.c:0;
+  const zone=x.min===x.max?num(x.min):num(x.min)+'〜'+num(x.max);
+  const turn=x.turn===null?'':num(x.turn)+' 付近まで'+(x.d===1?'下げて':'上げて')+'から、';
+  return '<section><h2 class="'+color+'">'+labels[x.method]+'・'+side+'候補ゾーン</h2><div class="price">'+zone+'</div>'+
+    '<small>'+(x.now?'仮条件成立・5分足確定待ち':Math.abs(distance)<0.005?'取得価格はゾーン内':'ゾーンまであと $'+num(Math.abs(distance))+(distance>0?' 上':' 下'))+'</small>'+
+    '<p><b>こうなれば</b> '+turn+'5分足が '+zone+(x.min===x.max?' 付近で確定。':' の範囲で確定。')+
+    (x.method==='trend'?(cfg.strict?'直近2本の'+(x.d===1?'高値を上抜け':'安値を下抜け')+'、15分EMAとDIの向きも一致。':'EMA・ADX・RSIの順張り条件が一致。'):
+     x.method==='range'?'反発ヒゲが実体の'+cfg.wick+'倍以上'+(cfg.strict?'で、ADXが前足以下。':'。'):'直近の高値・安値を抜いた後に反転。')+'</p></section>';
+ }).join('')||'<section>'+ (state.latest?'直近5分足で'+labels[state.latest.method]+'・'+(state.latest.d===1?'買い':'売り')+'条件成立 '+num(state.latest.entry):state.blocked?'GTMの保有判定・サイン間隔待ち':'候補なし')+'</section>';
+ if(!live) $('status').textContent+=' ／ 進行中の足は取得待ち';
+}
+let busy=false,timer;
+async function update(){
+ if(busy||document.hidden||!$('key').value.trim())return;
+ busy=true;
+ clearTimeout(timer);
+ $('refresh').disabled=true;
+ const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),18000);
+ try{
+  const params=new URLSearchParams({symbol:'XAU/USD',interval:'5min',outputsize:'3000',timezone:'UTC',order:'asc',apikey:$('key').value.trim()});
+  const response=await fetch('https://api.twelvedata.com/time_series?'+params,{cache:'no-store',signal:controller.signal});
+  if(!response.ok)throw Error('取得エラー HTTP '+response.status);
+  const data=await response.json();
+  if(!Array.isArray(data.values))throw Error('取得できません。APIキー・契約・利用上限を確認してください');
+  const now=Date.now();
+  const rows=[...new Map(data.values.map(v=>({t:Date.parse(v.datetime.replace(' ','T')+'Z'),o:+v.open,h:+v.high,l:+v.low,c:+v.close}))
+   .filter(b=>Object.values(b).every(Number.isFinite)&&b.t<=now&&b.h>=Math.max(b.o,b.c)&&b.l<=Math.min(b.o,b.c)).map(b=>[b.t,b])).values()].sort((a,b)=>a.t-b.t);
+  render(rows,now);
+ }catch(e){$('results').replaceChildren();$('status').textContent=e.name==='AbortError'?'取得がタイムアウトしました':e.message;}
+ finally{
+  clearTimeout(timeout);busy=false;$('refresh').disabled=false;
+  if(!document.hidden)timer=setTimeout(update,60000);
+ }
+}
+$('form').addEventListener('submit',e=>{
+ e.preventDefault();
+ cfg=Object.fromEntries(Object.entries(defaults).map(([k,[v]])=>[k,typeof v==='boolean'?$(k).checked:$(k).valueAsNumber]));
+ try{localStorage.setItem(settingsName,JSON.stringify(cfg));localStorage.setItem(keyName,$('key').value.trim());}catch{}
+ $('settings').open=false;
+ update();
+});
+$('refresh').onclick=update;
+document.addEventListener('visibilitychange',()=>{clearTimeout(timer);if(!document.hidden)update();});
+update();
+</script>
+</html>
