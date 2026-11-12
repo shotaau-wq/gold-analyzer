@@ -1,4 +1,4 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0c1422"><title>GOLD AI ANALYZER v25</title><style>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0c1422"><title>GOLD AI ANALYZER v26</title><style>
 :root{color-scheme:dark;--bg:#0c1422;--panel:#18263a;--edge:#35465d;--text:#f6f8fc;--muted:#b1bfd0;--gold:#f2ca78;--green:#75deb7;--red:#ffa6a6}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px -apple-system,BlinkMacSystemFont,sans-serif}main{max-width:660px;margin:auto;padding:18px 14px 70px}h1{font-size:23px;color:var(--gold);margin:3px 0}h2{font-size:17px;margin:0 0 12px}p{line-height:1.7}small,.muted{color:var(--muted);font-size:12px;line-height:1.7}.card{background:var(--panel);border:1px solid var(--edge);border-radius:16px;padding:15px;margin:11px 0}.hero{border-color:#957b46;background:linear-gradient(135deg,#273448,#18263a)}.row{display:flex;align-items:center;justify-content:space-between;gap:12px}.big{font-size:29px;font-weight:800;margin:6px 0}.pill{font-size:11px;border:1px solid #63748a;padding:5px 8px;border-radius:20px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.kv{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid #33465e;font-size:13px}.kv b{text-align:right;overflow-wrap:anywhere}.green{color:var(--green)}.red{color:var(--red)}.gold{color:var(--gold)}button,input,select{font:inherit}button{background:var(--gold);color:#162235;border:0;border-radius:10px;padding:13px;font-weight:750;cursor:pointer;width:100%}button:disabled{opacity:.5}input,select{width:100%;background:#0c192b;color:white;border:1px solid #62718a;border-radius:9px;padding:12px;margin:7px 0 12px}details>summary{cursor:pointer;font-weight:700}details[open]>summary{margin-bottom:14px}a{color:var(--gold)}.note{padding:11px;border-left:3px solid var(--gold);background:#101d30;border-radius:8px;font-size:13px;line-height:1.7}.status{font-size:12px;color:var(--muted)}.hidden{display:none}iframe{width:100%;height:720px;border:1px solid var(--edge);border-radius:12px;background:white}.warn{color:#ffd29d}.stale{opacity:.5}.meta{font-size:12px;line-height:1.7;color:var(--muted)}
 
 /* v23: mobile-first readable dashboard */
@@ -6,18 +6,21 @@ body{font-size:16px;line-height:1.55;background:#091321}main{max-width:760px;pad
 @media(max-width:370px){.grid{grid-template-columns:1fr}.grid .kv{display:flex}.grid .kv b{text-align:right;margin-top:0}.liveprice{font-size:33px}}
 .kv:has(> #trendSl),.kv:has(> #trendTp),.kv:has(> #revSl),.kv:has(> #revTp){display:none}
 
-/* v25: smartphone-first compact quote board */
+/* v26: smartphone-first compact quote board */
 .tf-section{padding:14px 12px}.tf-section>.muted{margin:8px 0 14px}
 .tf-section .tile{background:#0d1b2e;border:1px solid #3b506a;border-radius:15px;padding:14px 12px!important;margin-bottom:12px!important}
 .tf-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}.tf-head strong{font-size:20px;color:#f7f9ff}.tf-head span{font-size:11px;color:#c3d0df;text-align:right}
 .tf-prices{display:grid;grid-template-columns:1fr 1fr;gap:9px}.tf-quote{min-width:0;background:#162941;border-radius:12px;padding:12px 9px;border:1px solid #3d5871}.tf-quote.trend{border-top:3px solid #75deb7}.tf-quote.reverse{border-top:3px solid #ffa6a6}.tf-label{font-size:15px;font-weight:800;margin-bottom:7px}.tf-quote.trend .tf-label{color:#75deb7}.tf-quote.reverse .tf-label{color:#ffa6a6}.tf-num{font-size:clamp(20px,5.4vw,30px);font-weight:850;font-variant-numeric:tabular-nums;letter-spacing:-.8px;overflow-wrap:anywhere;line-height:1.2}.tf-sub{font-size:11px;color:#b5c4d5;margin-top:6px}.tf-foot{font-size:11px;color:#b7c7d9;line-height:1.6;margin-top:10px}
 @media(max-width:390px){.tf-num{font-size:21px}.tf-quote{padding:10px 7px}.tf-head strong{font-size:18px}}
+
+/* v26: directional strength and highlighted candidate zones */
+.hero{display:none!important}.livepanel{padding:12px 14px}.livepanel h2{font-size:14px}.liveprice{font-size:31px}.livehint{display:none}.tf-section{margin-top:8px}.tf-head{justify-content:flex-start;flex-wrap:wrap}.tf-head span{font-size:14px;font-weight:750;text-align:left}.tf-head .up{color:#75deb7}.tf-head .down{color:#ffa6a6}.tf-head .flat{color:#b1bfd0}.strength-track{height:6px;background:#304156;border-radius:12px;overflow:hidden;margin-bottom:11px}.strength-fill{height:100%;border-radius:12px;background:#8495a9}.strength-fill.up{background:#75deb7}.strength-fill.down{background:#ffa6a6}.tf-quote.trend,.tf-quote.reverse{border-top:0}.tf-quote.favored.buy{border:2px solid #75deb7;background:#123c35}.tf-quote.favored.sell{border:2px solid #ffa6a6;background:#432c39}.tf-quote.caution{opacity:.77}.tf-label{font-size:13px}.tf-num{font-size:clamp(14px,3.5vw,22px);letter-spacing:-.6px;white-space:nowrap;overflow-wrap:normal}.tf-quote{padding:11px 8px}.tf-sub{font-size:11px}.tf-foot{font-size:11px}.tf-quote .tag{display:inline-block;font-size:10px;font-weight:800;margin-top:5px}.tf-quote .tag.buy{color:#75deb7}.tf-quote .tag.sell{color:#ffa6a6}@media(max-width:390px){.tf-num{font-size:clamp(13px,3.55vw,17px)}}
 </style></head><body><main>
-<header class="row"><div><small>しょうたの相場分析 / シンプル表示 v25</small><h1>GOLD AI ANALYZER</h1></div><span id="state" class="pill">未取得</span></header>
+<header class="row"><div><small>しょうたの相場分析 / シンプル表示 v26</small><h1>GOLD AI ANALYZER</h1></div><span id="state" class="pill">未取得</span></header>
 <section class="card livepanel" aria-live="polite"><div class="row"><h2 style="margin:0">現在の参考価格</h2><span id="liveState" class="datachip">未取得</span></div><div id="livePrice" class="liveprice">--.--</div><div id="liveTime" class="muted">リアルタイム配信ではありません</div><div id="liveDistance" class="note" style="margin-top:12px">エントリー候補との距離：分析待ち</div><p class="livehint">Twelve Dataの価格APIから取得。配信遅延・更新間隔はAPI契約に依存します。確定足の終値とは別の数値です。</p></section>
 <section class="card hero"><div class="row"><small>XAU/USD・Twelve Data参考価格</small><span class="pill">確定足のみ</span></div><div id="price" class="big">--.--</div><div id="time" class="meta">価格未取得</div><hr style="border:0;border-top:1px solid #506078"><small>先出し分析（条件付きシナリオ）</small><div id="bias" class="big gold">分析待ち</div><div id="overview" class="note">15分足で方向を確認し、5分足で条件を判定します。</div></section>
 <div id="lines" class="grid" style="display:none" aria-hidden="true"><section class="card" style="margin:0"><h2 class="green">順張りライン</h2><div id="trendDir" class="muted">分析待ち</div><div class="kv"><span>ENTRY候補</span><b id="trendEntry">--</b></div><div class="kv"><span>SL参考</span><b id="trendSl">--</b></div><div class="kv"><span>TP1 / TP2</span><b id="trendTp">--</b></div><p id="trendWhy" class="muted"></p></section><section class="card" style="margin:0"><h2 class="red">逆張りライン</h2><div id="revDir" class="muted">分析待ち</div><div class="kv"><span>ENTRY候補</span><b id="revEntry">--</b></div><div class="kv"><span>SL参考</span><b id="revSl">--</b></div><div class="kv"><span>TP1 / TP2</span><b id="revTp">--</b></div><p id="revWhy" class="muted"></p></section></div>
-<section class="card tf-section"><div class="row"><h2 style="margin:0">時間足別ENTRY候補</h2><span id="multiState" class="pill">未取得</span></div><p class="muted">各時間足の順張り・逆張り価格を大きく表示。確定足から計算した参考価格です。</p><div id="tf15" class="tile" style="margin-bottom:9px">15分足：待機</div><div id="tf5" class="tile" style="margin-bottom:9px">5分足：待機</div><div id="tf1" class="tile">1分足：待機</div><p id="multiInfo" class="muted">1分足は別APIリクエストで取得。無料枠不足時は1分足のみ保留。</p></section>
+<section class="card tf-section"><div class="row"><h2 style="margin:0">時間足別ENTRY候補</h2><span id="multiState" class="pill">未取得</span></div><p class="muted">方向・勢いと順張り／逆張りゾーン。色付きは優先監視の候補です。勝率を示すものではありません。</p><div id="tf15" class="tile" style="margin-bottom:9px">15分足：待機</div><div id="tf5" class="tile" style="margin-bottom:9px">5分足：待機</div><div id="tf1" class="tile">1分足：待機</div><p id="multiInfo" class="muted">1分足は別APIリクエストで取得。無料枠不足時は1分足のみ保留。</p></section>
 <section class="card"><div class="row"><h2 style="margin:0">プライスアクション</h2><span id="paStatus" class="pill">待機</span></div><p id="pa" class="note">ローソク足の確定後に判定します。</p><small>包み足・ピンバー・高値安値ブレイク・リテストを参考判定。反転・継続を保証するものではありません。</small></section>
 <button id="refresh">今すぐ分析を更新</button><p id="status" class="status">下の「初期設定」でTwelve DataのAPIキーを入力してください。</p>
 <details class="card"><summary>フィボナッチ・EMA・RSI・ATR</summary><div id="indicators">取得待ち</div><p class="muted">フィボは確定15分足の直近50本の高値・安値を使用。相場構造のスイング確定ではありません。</p></details>
@@ -39,20 +42,36 @@ function paJudge(rows,high,low,vol){const a=rows.at(-1),b=rows.at(-2),body=Math.
 const div=(name,value)=>'<div class="kv"><span>'+name+'</span><b>'+f(value)+'</b></div>';
 
 function tfClear(){for(const id of ['tf15','tf5','tf1'])$(id).textContent=id.slice(2)+'分足：データ未確認';$('multiState').textContent='保留';$('multiInfo').textContent='価格データが不足・古い・取得失敗。候補を無効化しました。'}
+function trendStrength(rows,dir,v){
+ const closes=rows.map(r=>r.close),a=rows.at(-1),prev=rows.at(-6),e=ema(closes,20),old=ema(closes.slice(0,-5),20),r=rsi(closes);
+ if(![e,old,r,v].every(Number.isFinite)||!prev)return {level:'判定不可',pct:0};
+ // Strength is a descriptive score, NOT a probability or calibrated win rate.
+ const slope=Math.abs(e-old)/v,spread=Math.abs(a.close-e)/v;
+ const momentum=dir===1?Math.max(0,r-50):Math.max(0,50-r);
+ const directionMove=(a.close-prev.close)*dir/v;
+ const score=Math.min(100,Math.round(Math.min(35,slope*25)+Math.min(25,spread*13)+Math.min(25,momentum*1.25)+Math.min(15,Math.max(0,directionMove)*5)));
+ return {level:score>=65?'強':score>=35?'中':'弱',pct:score};
+}
 function tfBox(id,label,rows,upperBias){
  if(rows.length<35){$(id).textContent=label+'：確定足が不足';return null}
  const a=rows.at(-1),cl=rows.map(r=>r.close),e=ema(cl,20),v=atr(rows),h=Math.max(...rows.slice(-21,-1).map(r=>r.high)),l=Math.min(...rows.slice(-21,-1).map(r=>r.low));
  if(![e,v,h,l].every(Number.isFinite)||v<=0){$(id).textContent=label+'：計算不可';return null}
- const dir=a.close>=e?1:-1,trend=dir===1?'押し目買い':'戻り売り',counter=dir===1?'抵抗帯からの反落':'支持帯からの反発',pad=v*.2;
- const te=e,ts=dir===1?Math.min(l,te-v*.6):Math.max(h,te+v*.6),tr=Math.abs(te-ts),ce=dir===1?h:l,cs=dir===1?h+v*.7:l-v*.7,cr=Math.abs(ce-cs);
- const tfDirection=dir===1?'上向き':'下向き',alignment=upperBias===null?'上位足の方向基準':(upperBias===dir?'15分足と方向一致':'15分足と方向不一致・慎重に');
+ const dir=a.close>=e?1:-1,dirClass=dir===1?'up':'down',buy=dir===1,st=trendStrength(rows,dir,v);
+ const aligned=upperBias===null||upperBias===dir;
+ const favored=st.level!=='弱'&&aligned;
+ // ATR-adaptive zone around EMA20 for continuation, and prior high/low for reversal.
+ const pad=Math.max(v*.18,.01),trendLo=e-pad,trendHi=e+pad,revCenter=buy?h:l;
+ const revLo=revCenter-pad,revHi=revCenter+pad;
+ const trendAction=buy?'押し目買い':'戻り売り',reverseAction=buy?'反落売り':'反発買い';
+ const tag=favored?'優勢・監視':'反応確認待ち';
+ const alignText=upperBias===null?'基準足':aligned?'15分足と一致':'15分足と不一致';
  const pa=paJudge(rows,h,l,v).join('・');
- // A single central reference level per side; no invented live quote or hidden SL/TP.
- $(id).innerHTML='<div class="tf-head"><strong>'+label+'</strong><span>'+tfDirection+' ／ '+alignment+'</span></div>'+
+ $(id).innerHTML='<div class="tf-head"><strong>'+label+'</strong><span class="'+dirClass+'">'+(buy?'↑ 上昇':'↓ 下落')+' ／ 勢い '+st.level+'</span></div>'+
+ '<div class="strength-track"><div class="strength-fill '+dirClass+'" style="width:'+st.pct+'%"></div></div>'+
  '<div class="tf-prices">'+
- '<div class="tf-quote trend"><div class="tf-label">順張り</div><div class="tf-num">'+f(te)+'</div><div class="tf-sub">'+trend+'</div></div>'+
- '<div class="tf-quote reverse"><div class="tf-label">逆張り</div><div class="tf-num">'+f(ce)+'</div><div class="tf-sub">'+counter+'</div></div></div>'+
- '<div class="tf-foot">確定足 '+new Date(a.t).toLocaleTimeString('ja-JP',{timeZone:'Asia/Tokyo',hour:'2-digit',minute:'2-digit'})+' 開始 ／ '+alignment+'<br>PA：'+pa+'<br>価格到達だけでは条件成立ではありません</div>';
+ '<div class="tf-quote trend '+(favored?'favored '+(buy?'buy':'sell'):'caution')+'"><div class="tf-label">順張り・'+(buy?'買い':'売り')+'</div><div class="tf-num">'+f(trendLo)+'〜'+f(trendHi)+'</div><div class="tf-sub">'+trendAction+'</div><div class="tag '+(buy?'buy':'sell')+'">'+tag+'</div></div>'+
+ '<div class="tf-quote reverse caution"><div class="tf-label">逆張り・'+(buy?'売り':'買い')+'</div><div class="tf-num">'+f(revLo)+'〜'+f(revHi)+'</div><div class="tf-sub">'+reverseAction+'</div><div class="tag">反転確認待ち</div></div></div>'+
+ '<div class="tf-foot">'+alignText+' ／ 確定足 '+new Date(a.t).toLocaleTimeString('ja-JP',{timeZone:'Asia/Tokyo',hour:'2-digit',minute:'2-digit'})+'開始<br>PA：'+pa+'<br>色は指標条件の一致度。到達だけではエントリー条件成立ではありません。</div>';
  return dir
 }
 async function loadOneMinute(key,refTime,upperDir){
