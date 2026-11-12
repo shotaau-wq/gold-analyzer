@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "fetched_at": "2026-11-12T07:27:29.963749+00:00",
+  "fetched_at": "2026-11-12T16:55:01.736388+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
@@ -35,9 +35,9 @@
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-11-12T07:27:29.963749+00:00",
+  "bundle_fetched_at": "2026-11-12T16:55:01.736388+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-11-12T07:27:29.963749+00:00",
+  "rates_fetched_at": "2026-11-12T16:55:01.736388+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -314,14 +314,6 @@
         "previous": ""
       },
       {
-        "title": "Mortgage Delinquencies",
-        "country": "USD",
-        "date": "2026-11-12T15:00:00+00:00",
-        "impact": "Low",
-        "forecast": "",
-        "previous": "4.37%"
-      },
-      {
         "title": "FOMC Member Goolsbee Speaks",
         "country": "USD",
         "date": "2026-11-12T16:15:00+00:00",
@@ -336,6 +328,14 @@
         "impact": "Low",
         "forecast": "-0.6M",
         "previous": "-0.9M"
+      },
+      {
+        "title": "Mortgage Delinquencies",
+        "country": "USD",
+        "date": "2026-11-12T17:59:00+00:00",
+        "impact": "Low",
+        "forecast": "",
+        "previous": "4.37%"
       },
       {
         "title": "30-y Bond Auction",
@@ -442,34 +442,42 @@
         "previous": ""
       }
     ],
-    "fetched_at": "2026-11-12T07:27:29.963749+00:00",
+    "fetched_at": "2026-11-12T16:55:01.736388+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-11-12T07:27:29.963749+00:00",
+    "fetched_at": "2026-11-12T16:55:01.736388+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-11-12T07:27:29.963749+00:00"
+        "fetched_at": "2026-11-12T16:55:01.736388+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-11-12T07:27:29.963749+00:00"
+        "fetched_at": "2026-11-12T16:55:01.736388+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-11-12T07:27:29.963749+00:00"
+        "fetched_at": "2026-11-12T16:55:01.736388+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-11-12T07:27:29.963749+00:00"
+        "fetched_at": "2026-11-12T16:55:01.736388+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-11-12T07:27:29.963749+00:00"
+        "fetched_at": "2026-11-12T16:55:01.736388+00:00"
       }
     },
     "items": [
+      {
+        "title": "Barr, American Inequality and the Future of AI",
+        "url": "https://www.federalreserve.gov/newsevents/speech/barr20261112a.htm",
+        "published_at": "2026-11-12T15:00:00+00:00",
+        "source": "FRB 講演",
+        "summary": "Speech At Yale University, New Haven, Connecticut",
+        "feed": "fed_speeches"
+      },
       {
         "title": "Bowman, The U.S. Economy and Considerations for Monetary Policy",
         "url": "https://www.federalreserve.gov/newsevents/speech/bowman20261110a.htm",
@@ -588,14 +596,6 @@
         "published_at": "2026-10-01T17:30:00+00:00",
         "source": "FRB 講演",
         "summary": "Speech At the Darden School of Business, University of Virginia, Charlottesville, Virginia",
-        "feed": "fed_speeches"
-      },
-      {
-        "title": "Waller, The Data Version of Godzilla versus Kong: FRED Takes on AI",
-        "url": "https://www.federalreserve.gov/newsevents/speech/waller20261001a.htm",
-        "published_at": "2026-10-01T14:00:00+00:00",
-        "source": "FRB 講演",
-        "summary": "Speech At \"Navigating Trust, AI and Storytelling in a World of Data,\" FRED Con 2026, Federal Reserve Bank of St. Louis, St. Louis, Missouri",
         "feed": "fed_speeches"
       }
     ]
