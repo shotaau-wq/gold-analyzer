@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "fetched_at": "2026-11-13T12:24:41.642643+00:00",
+  "fetched_at": "2026-11-13T20:32:34.515813+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
@@ -35,9 +35,9 @@
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-11-13T12:24:41.642643+00:00",
+  "bundle_fetched_at": "2026-11-13T20:32:34.515813+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-11-13T12:24:41.642643+00:00",
+  "rates_fetched_at": "2026-11-13T20:32:34.515813+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -402,14 +402,6 @@
         "previous": ""
       },
       {
-        "title": "Mortgage Delinquencies",
-        "country": "USD",
-        "date": "2026-11-13T15:15:00+00:00",
-        "impact": "Low",
-        "forecast": "",
-        "previous": "4.37%"
-      },
-      {
         "title": "Natural Gas Storage",
         "country": "USD",
         "date": "2026-11-13T15:30:00+00:00",
@@ -442,34 +434,42 @@
         "previous": ""
       }
     ],
-    "fetched_at": "2026-11-13T12:24:41.642643+00:00",
+    "fetched_at": "2026-11-13T20:32:34.515813+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-11-13T12:24:41.642643+00:00",
+    "fetched_at": "2026-11-13T20:32:34.515813+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-11-13T12:24:41.642643+00:00"
+        "fetched_at": "2026-11-13T20:32:34.515813+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-11-13T12:24:41.642643+00:00"
+        "fetched_at": "2026-11-13T20:32:34.515813+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-11-13T12:24:41.642643+00:00"
+        "fetched_at": "2026-11-13T20:32:34.515813+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-11-13T12:24:41.642643+00:00"
+        "fetched_at": "2026-11-13T20:32:34.515813+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-11-13T12:24:41.642643+00:00"
+        "fetched_at": "2026-11-13T20:32:34.515813+00:00"
       }
     },
     "items": [
+      {
+        "title": "PPI for final demand increases 0.3% in October; goods advance 0.5%, services rise 0.2%",
+        "url": "https://www.bls.gov/news.release/archives/ppi_11132026.htm",
+        "published_at": "2026-11-13T12:50:34.956000+00:00",
+        "source": "BLS PPI",
+        "summary": "The Producer Price Index for final demand rose 0.3 percent in October. Prices for final demand goods increased 0.5 percent, and the index for final demand services moved up 0.2 percent. Prices for final demand advanced 6.5 percent for the 1",
+        "feed": "bls_ppi"
+      },
       {
         "title": "Federal Reserve announces revised tentative schedule of Federal Open Market Committee meetings in 2027",
         "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261112a.htm",
