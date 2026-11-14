@@ -1,43 +1,43 @@
 {
   "version": 1,
-  "fetched_at": "2026-11-13T20:32:34.515813+00:00",
+  "fetched_at": "2026-11-14T01:30:12.427771+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
       "latest": {
-        "date": "2026-11-10",
-        "value": 4.73
+        "date": "2026-11-12",
+        "value": 4.86
       },
       "previous": {
-        "date": "2026-11-09",
-        "value": 4.56
+        "date": "2026-11-10",
+        "value": 4.73
       }
     },
     "DGS10": {
       "latest": {
-        "date": "2026-11-10",
-        "value": 4.98
+        "date": "2026-11-12",
+        "value": 5.1
       },
       "previous": {
-        "date": "2026-11-09",
-        "value": 4.88
+        "date": "2026-11-10",
+        "value": 4.98
       }
     },
     "DFII10": {
       "latest": {
-        "date": "2026-11-10",
-        "value": 2.78
+        "date": "2026-11-12",
+        "value": 2.86
       },
       "previous": {
-        "date": "2026-11-09",
-        "value": 2.66
+        "date": "2026-11-10",
+        "value": 2.78
       }
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-11-13T20:32:34.515813+00:00",
+  "bundle_fetched_at": "2026-11-14T01:30:12.427771+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-11-13T20:32:34.515813+00:00",
+  "rates_fetched_at": "2026-11-14T01:30:12.427771+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -426,6 +426,14 @@
         "previous": ""
       },
       {
+        "title": "FOMC Financial Stability Report",
+        "country": "USD",
+        "date": "2026-11-13T21:00:00+00:00",
+        "impact": "Low",
+        "forecast": "",
+        "previous": ""
+      },
+      {
         "title": "FOMC Member Jefferson Speaks",
         "country": "USD",
         "date": "2026-11-14T00:00:00+00:00",
@@ -434,34 +442,42 @@
         "previous": ""
       }
     ],
-    "fetched_at": "2026-11-13T20:32:34.515813+00:00",
+    "fetched_at": "2026-11-14T01:30:12.427771+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-11-13T20:32:34.515813+00:00",
+    "fetched_at": "2026-11-14T01:30:12.427771+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-11-13T20:32:34.515813+00:00"
+        "fetched_at": "2026-11-14T01:30:12.427771+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-11-13T20:32:34.515813+00:00"
+        "fetched_at": "2026-11-14T01:30:12.427771+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-11-13T20:32:34.515813+00:00"
+        "fetched_at": "2026-11-14T01:30:12.427771+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-11-13T20:32:34.515813+00:00"
+        "fetched_at": "2026-11-14T01:30:12.427771+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-11-13T20:32:34.515813+00:00"
+        "fetched_at": "2026-11-14T01:30:12.427771+00:00"
       }
     },
     "items": [
+      {
+        "title": "Jefferson, New Technology, Old Questions: Productivity Puzzles and the Macroeconomy",
+        "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20261113a.htm",
+        "published_at": "2026-11-14T00:00:00+00:00",
+        "source": "FRB 講演",
+        "summary": "Speech At the University of California, San Diego Economic Roundtable, San Diego, California",
+        "feed": "fed_speeches"
+      },
       {
         "title": "PPI for final demand increases 0.3% in October; goods advance 0.5%, services rise 0.2%",
         "url": "https://www.bls.gov/news.release/archives/ppi_11132026.htm",
@@ -596,14 +612,6 @@
         "published_at": "2026-10-01T19:00:00+00:00",
         "source": "FRB 講演",
         "summary": "Speech At the Atlantic Council 2026 CEO & Senior Management Summit, Washington, D.C.",
-        "feed": "fed_speeches"
-      },
-      {
-        "title": "Jefferson, The U.S. Economy and Monetary Policy",
-        "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20261001a.htm",
-        "published_at": "2026-10-01T17:30:00+00:00",
-        "source": "FRB 講演",
-        "summary": "Speech At the Darden School of Business, University of Virginia, Charlottesville, Virginia",
         "feed": "fed_speeches"
       }
     ]
