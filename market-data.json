@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "fetched_at": "2026-11-15T15:43:54.979448+00:00",
+  "fetched_at": "2026-11-15T21:07:16.345453+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
@@ -35,9 +35,9 @@
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-11-15T15:43:54.979448+00:00",
+  "bundle_fetched_at": "2026-11-15T21:07:16.345453+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-11-15T15:43:54.979448+00:00",
+  "rates_fetched_at": "2026-11-15T21:07:16.345453+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -426,31 +426,31 @@
         "previous": ""
       }
     ],
-    "fetched_at": "2026-11-15T15:43:54.979448+00:00",
+    "fetched_at": "2026-11-15T21:07:16.345453+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-11-15T15:43:54.979448+00:00",
+    "fetched_at": "2026-11-15T21:07:16.345453+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-11-15T15:43:54.979448+00:00"
+        "fetched_at": "2026-11-15T21:07:16.345453+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-11-15T15:43:54.979448+00:00"
+        "fetched_at": "2026-11-15T21:07:16.345453+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-11-15T15:43:54.979448+00:00"
+        "fetched_at": "2026-11-15T21:07:16.345453+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-11-15T15:43:54.979448+00:00"
+        "fetched_at": "2026-11-15T21:07:16.345453+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-11-15T15:43:54.979448+00:00"
+        "fetched_at": "2026-11-15T21:07:16.345453+00:00"
       }
     },
     "items": [
@@ -589,14 +589,6 @@
         "source": "BLS 雇用統計",
         "summary": "Both nonfarm payroll employment (+29,000) and the unemployment rate (4.2 percent) changed little in September. Employment in all major industries changed little over the month.",
         "feed": "bls_jobs"
-      },
-      {
-        "title": "Bowman, Modernizing Financial Regulation: Initial Observations from eSLR",
-        "url": "https://www.federalreserve.gov/newsevents/speech/bowman20261001a.htm",
-        "published_at": "2026-10-01T19:00:00+00:00",
-        "source": "FRB 講演",
-        "summary": "Speech At the Atlantic Council 2026 CEO & Senior Management Summit, Washington, D.C.",
-        "feed": "fed_speeches"
       }
     ]
   }
