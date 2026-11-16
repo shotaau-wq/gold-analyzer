@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "fetched_at": "2026-11-16T08:05:24.004182+00:00",
+  "fetched_at": "2026-11-16T18:41:52.814536+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
@@ -35,9 +35,9 @@
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-11-16T08:05:24.004182+00:00",
+  "bundle_fetched_at": "2026-11-16T18:41:52.814536+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-11-16T08:05:24.004182+00:00",
+  "rates_fetched_at": "2026-11-16T18:41:52.814536+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -92,7 +92,7 @@
       {
         "title": "Cleveland Fed Inflation Expectations",
         "country": "USD",
-        "date": "2026-11-16T14:48:00+00:00",
+        "date": "2026-11-16T14:45:00+00:00",
         "impact": "Low",
         "forecast": "",
         "previous": "3.3%"
@@ -359,7 +359,7 @@
         "date": "2026-11-19T15:30:00+00:00",
         "impact": "Low",
         "forecast": "",
-        "previous": ""
+        "previous": "61B"
       },
       {
         "title": "FOMC Member Goolsbee Speaks",
@@ -434,34 +434,50 @@
         "previous": ""
       }
     ],
-    "fetched_at": "2026-11-16T08:05:24.004182+00:00",
+    "fetched_at": "2026-11-16T18:41:52.814536+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-11-16T08:05:24.004182+00:00",
+    "fetched_at": "2026-11-16T18:41:52.814536+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-11-16T08:05:24.004182+00:00"
+        "fetched_at": "2026-11-16T18:41:52.814536+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-11-16T08:05:24.004182+00:00"
+        "fetched_at": "2026-11-16T18:41:52.814536+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-11-16T08:05:24.004182+00:00"
+        "fetched_at": "2026-11-16T18:41:52.814536+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-11-16T08:05:24.004182+00:00"
+        "fetched_at": "2026-11-16T18:41:52.814536+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-11-16T08:05:24.004182+00:00"
+        "fetched_at": "2026-11-16T18:41:52.814536+00:00"
       }
     },
     "items": [
+      {
+        "title": "Warsh, Opening Remarks",
+        "url": "https://www.federalreserve.gov/newsevents/speech/warsh20261116a.htm",
+        "published_at": "2026-11-16T17:00:00+00:00",
+        "source": "FRB 講演",
+        "summary": "Speech At the Productivity and Jobs Task Force Conference, hosted by the Federal Reserve Board and the Federal Reserve Bank of San Francisco, San Francisco, California",
+        "feed": "fed_speeches"
+      },
+      {
+        "title": "Barr, Some Potential Financial Stability Implications of Artificial Intelligence",
+        "url": "https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm",
+        "published_at": "2026-11-16T10:00:00+00:00",
+        "source": "FRB 講演",
+        "summary": "Speech At the Seventh Annual Association for Computing Machinery International Conference on Artificial Intelligence in Finance, Milan, Italy",
+        "feed": "fed_speeches"
+      },
       {
         "title": "Jefferson, New Technology, Old Questions: Productivity Puzzles and the Macroeconomy",
         "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20261113a.htm",
@@ -581,22 +597,6 @@
         "source": "FRB 金融政策",
         "summary": "Minutes of the Federal Open Market Committee, September 15-16, 2026",
         "feed": "fed_policy"
-      },
-      {
-        "title": "Bowman, Modernizing the Regulatory and Supervisory Landscape",
-        "url": "https://www.federalreserve.gov/newsevents/speech/bowman20261006a.htm",
-        "published_at": "2026-10-06T14:45:00+00:00",
-        "source": "FRB 講演",
-        "summary": "Speech At the 2026 Community Banking Research Conference, sponsored by the Federal Reserve System, the Conference of State Bank Supervisors, and the Federal Deposit Insurance Corporation, St. Louis, Missouri",
-        "feed": "fed_speeches"
-      },
-      {
-        "title": "Both payroll employment (+29,000) and unemployment rate (4.2%) change little in September",
-        "url": "https://www.bls.gov/news.release/archives/empsit_10022026.htm",
-        "published_at": "2026-10-02T11:51:08.289000+00:00",
-        "source": "BLS 雇用統計",
-        "summary": "Both nonfarm payroll employment (+29,000) and the unemployment rate (4.2 percent) changed little in September. Employment in all major industries changed little over the month.",
-        "feed": "bls_jobs"
       }
     ]
   }
