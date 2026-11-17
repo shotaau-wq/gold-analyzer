@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "fetched_at": "2026-11-17T12:08:06.845964+00:00",
+  "fetched_at": "2026-11-17T21:07:20.460586+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
@@ -35,9 +35,9 @@
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-11-17T12:08:06.845964+00:00",
+  "bundle_fetched_at": "2026-11-17T21:07:20.460586+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-11-17T12:08:06.845964+00:00",
+  "rates_fetched_at": "2026-11-17T21:07:20.460586+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -270,7 +270,7 @@
         "country": "USD",
         "date": "2026-11-18T15:00:00+00:00",
         "impact": "Low",
-        "forecast": "-2.1%",
+        "forecast": "-1.8%",
         "previous": "-7.3%"
       },
       {
@@ -278,7 +278,7 @@
         "country": "USD",
         "date": "2026-11-18T15:30:00+00:00",
         "impact": "Low",
-        "forecast": "",
+        "forecast": "-0.3M",
         "previous": "4.7M"
       },
       {
@@ -466,34 +466,42 @@
         "previous": ""
       }
     ],
-    "fetched_at": "2026-11-17T12:08:06.845964+00:00",
+    "fetched_at": "2026-11-17T21:07:20.460586+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-11-17T12:08:06.845964+00:00",
+    "fetched_at": "2026-11-17T21:07:20.460586+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-11-17T12:08:06.845964+00:00"
+        "fetched_at": "2026-11-17T21:07:20.460586+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-11-17T12:08:06.845964+00:00"
+        "fetched_at": "2026-11-17T21:07:20.460586+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-11-17T12:08:06.845964+00:00"
+        "fetched_at": "2026-11-17T21:07:20.460586+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-11-17T12:08:06.845964+00:00"
+        "fetched_at": "2026-11-17T21:07:20.460586+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-11-17T12:08:06.845964+00:00"
+        "fetched_at": "2026-11-17T21:07:20.460586+00:00"
       }
     },
     "items": [
+      {
+        "title": "Waller, Considerations at the Intersection of Payments and Tokenized Markets",
+        "url": "https://www.federalreserve.gov/newsevents/speech/waller20261117a.htm",
+        "published_at": "2026-11-17T14:10:00+00:00",
+        "source": "FRB 講演",
+        "summary": "Speech At “Navigating the Future of Banking and Payments,” The Clearing House Annual Conference 2026, New York, New York",
+        "feed": "fed_speeches"
+      },
       {
         "title": "Warsh, Opening Remarks",
         "url": "https://www.federalreserve.gov/newsevents/speech/warsh20261116a.htm",
@@ -613,14 +621,6 @@
         "source": "FRB 金融政策",
         "summary": "Minutes of the Board's discount rate meetings on August 17, September 9, and September 16, 2026",
         "feed": "fed_policy"
-      },
-      {
-        "title": "Waller, The Signaling Value of the Summary of Economic Projections",
-        "url": "https://www.federalreserve.gov/newsevents/speech/waller20261008a.htm",
-        "published_at": "2026-10-08T08:30:00+00:00",
-        "source": "FRB 講演",
-        "summary": "Speech At the Istanbul Economic Forum, Central Bank of the Republic of Türkiye, Istanbul, Türkiye",
-        "feed": "fed_speeches"
       },
       {
         "title": "Minutes of the Federal Open Market Committee, September 15-16, 2026",
