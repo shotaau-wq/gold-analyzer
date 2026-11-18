@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "fetched_at": "2026-11-18T11:58:10.719840+00:00",
+  "fetched_at": "2026-11-18T20:44:24.213261+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
@@ -35,9 +35,9 @@
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-11-18T11:58:10.719840+00:00",
+  "bundle_fetched_at": "2026-11-18T20:44:24.213261+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-11-18T11:58:10.719840+00:00",
+  "rates_fetched_at": "2026-11-18T20:44:24.213261+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -466,34 +466,50 @@
         "previous": ""
       }
     ],
-    "fetched_at": "2026-11-18T11:58:10.719840+00:00",
+    "fetched_at": "2026-11-18T20:44:24.213261+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-11-18T11:58:10.719840+00:00",
+    "fetched_at": "2026-11-18T20:44:24.213261+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-11-18T11:58:10.719840+00:00"
+        "fetched_at": "2026-11-18T20:44:24.213261+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-11-18T11:58:10.719840+00:00"
+        "fetched_at": "2026-11-18T20:44:24.213261+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-11-18T11:58:10.719840+00:00"
+        "fetched_at": "2026-11-18T20:44:24.213261+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-11-18T11:58:10.719840+00:00"
+        "fetched_at": "2026-11-18T20:44:24.213261+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-11-18T11:58:10.719840+00:00"
+        "fetched_at": "2026-11-18T20:44:24.213261+00:00"
       }
     },
     "items": [
+      {
+        "title": "Minutes of the Federal Open Market Committee, October 27-28, 2026",
+        "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm",
+        "published_at": "2026-11-18T19:00:00+00:00",
+        "source": "FRB 金融政策",
+        "summary": "Minutes of the Federal Open Market Committee, October 27-28, 2026",
+        "feed": "fed_policy"
+      },
+      {
+        "title": "Barr, Investing in America’s Underserved Communities",
+        "url": "https://www.federalreserve.gov/newsevents/speech/barr20261118a.htm",
+        "published_at": "2026-11-18T18:35:00+00:00",
+        "source": "FRB 講演",
+        "summary": "Speech At Making Missing Markets: Catalyzing Capital and Igniting Innovation, Federal Reserve Bank of New York, New York, New York",
+        "feed": "fed_speeches"
+      },
       {
         "title": "Waller, Considerations at the Intersection of Payments and Tokenized Markets",
         "url": "https://www.federalreserve.gov/newsevents/speech/waller20261117a.htm",
@@ -597,14 +613,6 @@
         "source": "BLS PPI",
         "summary": "The Producer Price Index for final demand increased 1.3 percent in September. Prices for final demand goods rose 2.6 percent, and the index for final demand services advanced 0.8 percent. Prices for final demand moved up 6.3 percent for the",
         "feed": "bls_ppi"
-      },
-      {
-        "title": "Bowman, Supervisory Modernization After Silicon Valley Bank",
-        "url": "https://www.federalreserve.gov/newsevents/speech/bowman20261014a.htm",
-        "published_at": "2026-10-15T02:55:00+00:00",
-        "source": "FRB 講演",
-        "summary": "Speech At the Bangkok Economic Festival, Reinventing Bretton Woods Committee, Bangkok, Thailand",
-        "feed": "fed_speeches"
       },
       {
         "title": "CPI for all items increases 0.6% in September; gasoline rises",
