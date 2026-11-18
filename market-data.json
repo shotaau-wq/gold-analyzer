@@ -1,43 +1,43 @@
 {
   "version": 1,
-  "fetched_at": "2026-11-17T21:07:20.460586+00:00",
+  "fetched_at": "2026-11-18T02:58:09.884419+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
       "latest": {
-        "date": "2026-11-13",
-        "value": 4.88
+        "date": "2026-11-16",
+        "value": 4.83
       },
       "previous": {
-        "date": "2026-11-12",
-        "value": 4.86
+        "date": "2026-11-13",
+        "value": 4.88
       }
     },
     "DGS10": {
       "latest": {
-        "date": "2026-11-13",
-        "value": 5.15
+        "date": "2026-11-16",
+        "value": 5.12
       },
       "previous": {
-        "date": "2026-11-12",
-        "value": 5.1
+        "date": "2026-11-13",
+        "value": 5.15
       }
     },
     "DFII10": {
       "latest": {
-        "date": "2026-11-13",
-        "value": 2.91
+        "date": "2026-11-16",
+        "value": 2.92
       },
       "previous": {
-        "date": "2026-11-12",
-        "value": 2.86
+        "date": "2026-11-13",
+        "value": 2.91
       }
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-11-17T21:07:20.460586+00:00",
+  "bundle_fetched_at": "2026-11-18T02:58:09.884419+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-11-17T21:07:20.460586+00:00",
+  "rates_fetched_at": "2026-11-18T02:58:09.884419+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -270,7 +270,7 @@
         "country": "USD",
         "date": "2026-11-18T15:00:00+00:00",
         "impact": "Low",
-        "forecast": "-1.8%",
+        "forecast": "-2.0%",
         "previous": "-7.3%"
       },
       {
@@ -278,7 +278,7 @@
         "country": "USD",
         "date": "2026-11-18T15:30:00+00:00",
         "impact": "Low",
-        "forecast": "-0.3M",
+        "forecast": "0.4M",
         "previous": "4.7M"
       },
       {
@@ -342,7 +342,7 @@
         "country": "USD",
         "date": "2026-11-19T13:30:00+00:00",
         "impact": "Medium",
-        "forecast": "19.2",
+        "forecast": "20.6",
         "previous": "20.9"
       },
       {
@@ -350,7 +350,7 @@
         "country": "USD",
         "date": "2026-11-19T13:30:00+00:00",
         "impact": "Medium",
-        "forecast": "199K",
+        "forecast": "198K",
         "previous": "200K"
       },
       {
@@ -390,7 +390,7 @@
         "country": "USD",
         "date": "2026-11-19T15:30:00+00:00",
         "impact": "Low",
-        "forecast": "",
+        "forecast": "25B",
         "previous": "61B"
       },
       {
@@ -446,7 +446,7 @@
         "country": "USD",
         "date": "2026-11-20T15:00:00+00:00",
         "impact": "Medium",
-        "forecast": "52.1",
+        "forecast": "51.7",
         "previous": "51.0"
       },
       {
@@ -466,31 +466,31 @@
         "previous": ""
       }
     ],
-    "fetched_at": "2026-11-17T21:07:20.460586+00:00",
+    "fetched_at": "2026-11-18T02:58:09.884419+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-11-17T21:07:20.460586+00:00",
+    "fetched_at": "2026-11-18T02:58:09.884419+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-11-17T21:07:20.460586+00:00"
+        "fetched_at": "2026-11-18T02:58:09.884419+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-11-17T21:07:20.460586+00:00"
+        "fetched_at": "2026-11-18T02:58:09.884419+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-11-17T21:07:20.460586+00:00"
+        "fetched_at": "2026-11-18T02:58:09.884419+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-11-17T21:07:20.460586+00:00"
+        "fetched_at": "2026-11-18T02:58:09.884419+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-11-17T21:07:20.460586+00:00"
+        "fetched_at": "2026-11-18T02:58:09.884419+00:00"
       }
     },
     "items": [
