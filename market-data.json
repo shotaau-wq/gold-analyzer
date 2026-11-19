@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "fetched_at": "2026-11-19T11:55:01.750352+00:00",
+  "fetched_at": "2026-11-19T20:49:54.011327+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
@@ -35,9 +35,9 @@
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-11-19T11:55:01.750352+00:00",
+  "bundle_fetched_at": "2026-11-19T20:49:54.011327+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-11-19T11:55:01.750352+00:00",
+  "rates_fetched_at": "2026-11-19T20:49:54.011327+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -378,20 +378,20 @@
         "previous": "0.0%"
       },
       {
-        "title": "Mortgage Delinquencies",
-        "country": "USD",
-        "date": "2026-11-19T15:15:00+00:00",
-        "impact": "Low",
-        "forecast": "",
-        "previous": "4.37%"
-      },
-      {
         "title": "Natural Gas Storage",
         "country": "USD",
         "date": "2026-11-19T15:30:00+00:00",
         "impact": "Low",
         "forecast": "25B",
         "previous": "61B"
+      },
+      {
+        "title": "Mortgage Delinquencies",
+        "country": "USD",
+        "date": "2026-11-19T15:46:00+00:00",
+        "impact": "Low",
+        "forecast": "",
+        "previous": "4.37%"
       },
       {
         "title": "FOMC Member Goolsbee Speaks",
@@ -466,34 +466,42 @@
         "previous": ""
       }
     ],
-    "fetched_at": "2026-11-19T11:55:01.750352+00:00",
+    "fetched_at": "2026-11-19T20:49:54.011327+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-11-19T11:55:01.750352+00:00",
+    "fetched_at": "2026-11-19T20:49:54.011327+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-11-19T11:55:01.750352+00:00"
+        "fetched_at": "2026-11-19T20:49:54.011327+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-11-19T11:55:01.750352+00:00"
+        "fetched_at": "2026-11-19T20:49:54.011327+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-11-19T11:55:01.750352+00:00"
+        "fetched_at": "2026-11-19T20:49:54.011327+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-11-19T11:55:01.750352+00:00"
+        "fetched_at": "2026-11-19T20:49:54.011327+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-11-19T11:55:01.750352+00:00"
+        "fetched_at": "2026-11-19T20:49:54.011327+00:00"
       }
     },
     "items": [
+      {
+        "title": "Jefferson, Monetary Policy amid Frequent and Complex Shocks",
+        "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20261119a.htm",
+        "published_at": "2026-11-19T14:25:00+00:00",
+        "source": "FRB 講演",
+        "summary": "Speech At the International Monetary Fund and Central Bank of Brazil Conference “A Quarter Century of Inflation Targeting in Latin America: Progress, Challenges, and the Road Ahead,” Brasília, Brazil",
+        "feed": "fed_speeches"
+      },
       {
         "title": "Minutes of the Federal Open Market Committee, October 27-28, 2026",
         "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm",
@@ -581,14 +589,6 @@
         "source": "BLS CPI",
         "summary": "In October, the Consumer Price Index for All Urban Consumers rose 0.4 percent, seasonally adjusted (SA). The index for all items less food and energy rose 0.3 percent in October (SA).",
         "feed": "bls_cpi"
-      },
-      {
-        "title": "Waller, The Economic Outlook and Some Thoughts on Labor Market Dynamism",
-        "url": "https://www.federalreserve.gov/newsevents/speech/waller20261110a.htm",
-        "published_at": "2026-11-10T09:00:00+00:00",
-        "source": "FRB 講演",
-        "summary": "Speech At the Bank of England Watchers Conference King’s Business School and Money, Macro and Finance Society, London, United Kingdom",
-        "feed": "fed_speeches"
       },
       {
         "title": "Payroll employment rises by 165,000 in October; unemployment rate changes little at 4.1%",
