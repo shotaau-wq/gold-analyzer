@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "fetched_at": "2026-11-20T11:56:18.202451+00:00",
+  "fetched_at": "2026-11-20T20:34:25.179875+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
@@ -35,9 +35,9 @@
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-11-20T11:56:18.202451+00:00",
+  "bundle_fetched_at": "2026-11-20T20:34:25.179875+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-11-20T11:56:18.202451+00:00",
+  "rates_fetched_at": "2026-11-20T20:34:25.179875+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -458,6 +458,14 @@
         "previous": "4.3%"
       },
       {
+        "title": "President Trump Speaks",
+        "country": "USD",
+        "date": "2026-11-20T17:00:00+00:00",
+        "impact": "Medium",
+        "forecast": "",
+        "previous": ""
+      },
+      {
         "title": "FOMC Member Cook Speaks",
         "country": "USD",
         "date": "2026-11-20T17:15:00+00:00",
@@ -466,34 +474,50 @@
         "previous": ""
       }
     ],
-    "fetched_at": "2026-11-20T11:56:18.202451+00:00",
+    "fetched_at": "2026-11-20T20:34:25.179875+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-11-20T11:56:18.202451+00:00",
+    "fetched_at": "2026-11-20T20:34:25.179875+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-11-20T11:56:18.202451+00:00"
+        "fetched_at": "2026-11-20T20:34:25.179875+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-11-20T11:56:18.202451+00:00"
+        "fetched_at": "2026-11-20T20:34:25.179875+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-11-20T11:56:18.202451+00:00"
+        "fetched_at": "2026-11-20T20:34:25.179875+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-11-20T11:56:18.202451+00:00"
+        "fetched_at": "2026-11-20T20:34:25.179875+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-11-20T11:56:18.202451+00:00"
+        "fetched_at": "2026-11-20T20:34:25.179875+00:00"
       }
     },
     "items": [
+      {
+        "title": "Cook, The U.S. Economy in Global Context",
+        "url": "https://www.federalreserve.gov/newsevents/speech/cook20261120a.htm",
+        "published_at": "2026-11-20T17:15:00+00:00",
+        "source": "FRB 講演",
+        "summary": "Speech At the XXIX Annual Conference of the Central Bank of Chile, Santiago, Chile",
+        "feed": "fed_speeches"
+      },
+      {
+        "title": "Waller, Opening Remarks",
+        "url": "https://www.federalreserve.gov/newsevents/speech/waller20261120a.htm",
+        "published_at": "2026-11-20T13:25:00+00:00",
+        "source": "FRB 講演",
+        "summary": "Speech At the 2026 College Fed Challenge Finals, Board of Governors of the Federal Reserve System, Washington, D.C.",
+        "feed": "fed_speeches"
+      },
       {
         "title": "Jefferson, Monetary Policy amid Frequent and Complex Shocks",
         "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20261119a.htm",
@@ -565,22 +589,6 @@
         "source": "FRB 金融政策",
         "summary": "Federal Reserve announces revised tentative schedule of Federal Open Market Committee meetings in 2027",
         "feed": "fed_policy"
-      },
-      {
-        "title": "Barr, American Inequality and the Future of AI",
-        "url": "https://www.federalreserve.gov/newsevents/speech/barr20261112a.htm",
-        "published_at": "2026-11-12T15:00:00+00:00",
-        "source": "FRB 講演",
-        "summary": "Speech At Yale University, New Haven, Connecticut",
-        "feed": "fed_speeches"
-      },
-      {
-        "title": "Bowman, The U.S. Economy and Considerations for Monetary Policy",
-        "url": "https://www.federalreserve.gov/newsevents/speech/bowman20261110a.htm",
-        "published_at": "2026-11-10T20:30:00+00:00",
-        "source": "FRB 講演",
-        "summary": "Speech At the C. Peter McColough Series on International Economics Council on Foreign Relations, Washington, D.C.",
-        "feed": "fed_speeches"
       },
       {
         "title": "CPI for all items increases 0.4% in October; shelter rises",
