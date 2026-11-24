@@ -1,43 +1,43 @@
 {
   "version": 1,
-  "fetched_at": "2026-11-24T13:59:44.494435+00:00",
+  "fetched_at": "2026-11-24T23:32:51.507012+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
       "latest": {
-        "date": "2026-11-20",
+        "date": "2026-11-23",
         "value": 4.63
       },
       "previous": {
-        "date": "2026-11-19",
-        "value": 4.76
+        "date": "2026-11-20",
+        "value": 4.63
       }
     },
     "DGS10": {
       "latest": {
-        "date": "2026-11-20",
+        "date": "2026-11-23",
         "value": 4.92
       },
       "previous": {
-        "date": "2026-11-19",
-        "value": 5.04
+        "date": "2026-11-20",
+        "value": 4.92
       }
     },
     "DFII10": {
       "latest": {
-        "date": "2026-11-20",
-        "value": 2.77
+        "date": "2026-11-23",
+        "value": 2.79
       },
       "previous": {
-        "date": "2026-11-19",
-        "value": 2.88
+        "date": "2026-11-20",
+        "value": 2.77
       }
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-11-24T13:59:44.494435+00:00",
+  "bundle_fetched_at": "2026-11-24T23:32:51.507012+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-11-24T13:59:44.494435+00:00",
+  "rates_fetched_at": "2026-11-24T23:32:51.507012+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -274,34 +274,42 @@
         "previous": "0.6%"
       }
     ],
-    "fetched_at": "2026-11-24T13:59:44.494435+00:00",
+    "fetched_at": "2026-11-24T23:32:51.507012+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-11-24T13:59:44.494435+00:00",
+    "fetched_at": "2026-11-24T23:32:51.507012+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-11-24T13:59:44.494435+00:00"
+        "fetched_at": "2026-11-24T23:32:51.507012+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-11-24T13:59:44.494435+00:00"
+        "fetched_at": "2026-11-24T23:32:51.507012+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-11-24T13:59:44.494435+00:00"
+        "fetched_at": "2026-11-24T23:32:51.507012+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-11-24T13:59:44.494435+00:00"
+        "fetched_at": "2026-11-24T23:32:51.507012+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-11-24T13:59:44.494435+00:00"
+        "fetched_at": "2026-11-24T23:32:51.507012+00:00"
       }
     },
     "items": [
+      {
+        "title": "Minutes of the Board's discount rate meetings on October 19 and October 28, 2026",
+        "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261124a.htm",
+        "published_at": "2026-11-24T19:00:00+00:00",
+        "source": "FRB 金融政策",
+        "summary": "Minutes of the Board's discount rate meetings on October 19 and October 28, 2026",
+        "feed": "fed_policy"
+      },
       {
         "title": "Cook, The U.S. Economy in Global Context",
         "url": "https://www.federalreserve.gov/newsevents/speech/cook20261120a.htm",
