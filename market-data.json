@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "fetched_at": "2026-11-25T08:53:38.713046+00:00",
+  "fetched_at": "2026-11-25T19:27:22.909971+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
@@ -35,9 +35,9 @@
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-11-25T08:53:38.713046+00:00",
+  "bundle_fetched_at": "2026-11-25T19:27:22.909971+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-11-25T08:53:38.713046+00:00",
+  "rates_fetched_at": "2026-11-25T19:27:22.909971+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -282,34 +282,42 @@
         "previous": "0.6%"
       }
     ],
-    "fetched_at": "2026-11-25T08:53:38.713046+00:00",
+    "fetched_at": "2026-11-25T19:27:22.909971+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-11-25T08:53:38.713046+00:00",
+    "fetched_at": "2026-11-25T19:27:22.909971+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-11-25T08:53:38.713046+00:00"
+        "fetched_at": "2026-11-25T19:27:22.909971+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-11-25T08:53:38.713046+00:00"
+        "fetched_at": "2026-11-25T19:27:22.909971+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-11-25T08:53:38.713046+00:00"
+        "fetched_at": "2026-11-25T19:27:22.909971+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-11-25T08:53:38.713046+00:00"
+        "fetched_at": "2026-11-25T19:27:22.909971+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-11-25T08:53:38.713046+00:00"
+        "fetched_at": "2026-11-25T19:27:22.909971+00:00"
       }
     },
     "items": [
+      {
+        "title": "Bowman, Modernizing Banking Supervision: A Shared Agenda for the Americas",
+        "url": "https://www.federalreserve.gov/newsevents/speech/bowman20261125a.htm",
+        "published_at": "2026-11-25T12:25:00+00:00",
+        "source": "FRB 講演",
+        "summary": "Speech At the ASBA–BCBS–FSI High-Level Meeting for the Americas on Banking Supervision, Brasília, Brazil (via pre-recorded video)",
+        "feed": "fed_speeches"
+      },
       {
         "title": "Minutes of the Board's discount rate meetings on October 19 and October 28, 2026",
         "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261124a.htm",
@@ -380,14 +388,6 @@
         "published_at": "2026-11-16T10:00:00+00:00",
         "source": "FRB 講演",
         "summary": "Speech At the Seventh Annual Association for Computing Machinery International Conference on Artificial Intelligence in Finance, Milan, Italy",
-        "feed": "fed_speeches"
-      },
-      {
-        "title": "Jefferson, New Technology, Old Questions: Productivity Puzzles and the Macroeconomy",
-        "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20261113a.htm",
-        "published_at": "2026-11-14T00:00:00+00:00",
-        "source": "FRB 講演",
-        "summary": "Speech At the University of California, San Diego Economic Roundtable, San Diego, California",
         "feed": "fed_speeches"
       },
       {
