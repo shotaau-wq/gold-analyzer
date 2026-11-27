@@ -1,43 +1,43 @@
 {
   "version": 1,
-  "fetched_at": "2026-11-27T15:22:38.452550+00:00",
+  "fetched_at": "2026-11-27T23:38:09.908853+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
       "latest": {
-        "date": "2026-11-24",
-        "value": 4.63
+        "date": "2026-11-25",
+        "value": 4.61
       },
       "previous": {
-        "date": "2026-11-23",
+        "date": "2026-11-24",
         "value": 4.63
       }
     },
     "DGS10": {
       "latest": {
-        "date": "2026-11-24",
-        "value": 4.91
+        "date": "2026-11-25",
+        "value": 4.85
       },
       "previous": {
-        "date": "2026-11-23",
-        "value": 4.92
+        "date": "2026-11-24",
+        "value": 4.91
       }
     },
     "DFII10": {
       "latest": {
-        "date": "2026-11-24",
-        "value": 2.79
+        "date": "2026-11-25",
+        "value": 2.73
       },
       "previous": {
-        "date": "2026-11-23",
+        "date": "2026-11-24",
         "value": 2.79
       }
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-11-27T15:22:38.452550+00:00",
+  "bundle_fetched_at": "2026-11-27T23:38:09.908853+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-11-27T15:22:38.452550+00:00",
+  "rates_fetched_at": "2026-11-27T23:38:09.908853+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -282,31 +282,31 @@
         "previous": "0.6%"
       }
     ],
-    "fetched_at": "2026-11-27T15:22:38.452550+00:00",
+    "fetched_at": "2026-11-27T23:38:09.908853+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-11-27T15:22:38.452550+00:00",
+    "fetched_at": "2026-11-27T23:38:09.908853+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-11-27T15:22:38.452550+00:00"
+        "fetched_at": "2026-11-27T23:38:09.908853+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-11-27T15:22:38.452550+00:00"
+        "fetched_at": "2026-11-27T23:38:09.908853+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-11-27T15:22:38.452550+00:00"
+        "fetched_at": "2026-11-27T23:38:09.908853+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-11-27T15:22:38.452550+00:00"
+        "fetched_at": "2026-11-27T23:38:09.908853+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-11-27T15:22:38.452550+00:00"
+        "fetched_at": "2026-11-27T23:38:09.908853+00:00"
       }
     },
     "items": [
@@ -445,14 +445,6 @@
         "source": "BLS CPI",
         "summary": "In September, the Consumer Price Index for All Urban Consumers rose 0.6 percent, seasonally adjusted (SA), and rose 3.7 percent over the year, not seasonally adjusted (NSA). The index for all items less food and energy rose 0.3 percent in S",
         "feed": "bls_cpi"
-      },
-      {
-        "title": "Minutes of the Board's discount rate meetings on August 17, September 9, and September 16, 2026",
-        "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261013a.htm",
-        "published_at": "2026-10-13T18:00:00+00:00",
-        "source": "FRB 金融政策",
-        "summary": "Minutes of the Board's discount rate meetings on August 17, September 9, and September 16, 2026",
-        "feed": "fed_policy"
       }
     ]
   }
