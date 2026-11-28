@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "fetched_at": "2026-11-28T08:08:55.016467+00:00",
+  "fetched_at": "2026-11-28T17:00:23.259803+00:00",
   "source": "Federal Reserve H.15 / FRED",
   "rates": {
     "DGS2": {
@@ -35,9 +35,9 @@
     }
   },
   "bundle_version": 4,
-  "bundle_fetched_at": "2026-11-28T08:08:55.016467+00:00",
+  "bundle_fetched_at": "2026-11-28T17:00:23.259803+00:00",
   "rates_error": null,
-  "rates_fetched_at": "2026-11-28T08:08:55.016467+00:00",
+  "rates_fetched_at": "2026-11-28T17:00:23.259803+00:00",
   "calendar": {
     "error": null,
     "events": [
@@ -282,31 +282,31 @@
         "previous": "0.6%"
       }
     ],
-    "fetched_at": "2026-11-28T08:08:55.016467+00:00",
+    "fetched_at": "2026-11-28T17:00:23.259803+00:00",
     "source": "Forex Factory"
   },
   "news": {
-    "fetched_at": "2026-11-28T08:08:55.016467+00:00",
+    "fetched_at": "2026-11-28T17:00:23.259803+00:00",
     "sources": {
       "fed_policy": {
         "error": null,
-        "fetched_at": "2026-11-28T08:08:55.016467+00:00"
+        "fetched_at": "2026-11-28T17:00:23.259803+00:00"
       },
       "fed_speeches": {
         "error": null,
-        "fetched_at": "2026-11-28T08:08:55.016467+00:00"
+        "fetched_at": "2026-11-28T17:00:23.259803+00:00"
       },
       "bls_cpi": {
         "error": null,
-        "fetched_at": "2026-11-28T08:08:55.016467+00:00"
+        "fetched_at": "2026-11-28T17:00:23.259803+00:00"
       },
       "bls_jobs": {
         "error": null,
-        "fetched_at": "2026-11-28T08:08:55.016467+00:00"
+        "fetched_at": "2026-11-28T17:00:23.259803+00:00"
       },
       "bls_ppi": {
         "error": null,
-        "fetched_at": "2026-11-28T08:08:55.016467+00:00"
+        "fetched_at": "2026-11-28T17:00:23.259803+00:00"
       }
     },
     "items": [
@@ -437,14 +437,6 @@
         "source": "BLS PPI",
         "summary": "The Producer Price Index for final demand increased 1.3 percent in September. Prices for final demand goods rose 2.6 percent, and the index for final demand services advanced 0.8 percent. Prices for final demand moved up 6.3 percent for the",
         "feed": "bls_ppi"
-      },
-      {
-        "title": "CPI for all items increases 0.6% in September; gasoline rises",
-        "url": "https://www.bls.gov/news.release/archives/cpi_10142026.htm",
-        "published_at": "2026-10-14T11:50:31.200000+00:00",
-        "source": "BLS CPI",
-        "summary": "In September, the Consumer Price Index for All Urban Consumers rose 0.6 percent, seasonally adjusted (SA), and rose 3.7 percent over the year, not seasonally adjusted (NSA). The index for all items less food and energy rose 0.3 percent in S",
-        "feed": "bls_cpi"
       }
     ]
   }
